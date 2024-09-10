@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply custom scrollbar styles to the entire page */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4f46e5;
+  border-radius: 10px;
+  border: 2px solid #1a1a1a;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4f46e5 #020617;
+  font-family: "Lexend", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #010014;
+}
+.jetbrains {
+  font-family: "JetBrains Mono", monospace;
+}
