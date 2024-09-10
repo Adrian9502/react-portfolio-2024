@@ -1,5 +1,11 @@
+import { GlowMouse } from "./GlowMouse";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <GlowMouse />
+    </>
+  );
 }
 
 export default App;
