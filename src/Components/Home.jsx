@@ -4,7 +4,6 @@ import { SiGmail } from "react-icons/si";
 import CodeDisplay from "./Home/CodeDisplay";
 import { motion } from "framer-motion";
 import SocialIcons from "./Home/SocialIcons";
-import { RxDoubleArrowDown } from "react-icons/rx";
 
 export default function Home() {
   // Animation variants for different text elements
