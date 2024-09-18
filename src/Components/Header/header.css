@@ -1,0 +1,21 @@
+.nav-item {
+  position: relative;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00c7ff;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
