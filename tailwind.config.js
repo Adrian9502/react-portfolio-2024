@@ -4,9 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "bright-purple": "#8000FF",
-
-        "bright-violet": "#8A2BE2",
+        "custom-cyan": "#00c7ff",
       },
     },
   },

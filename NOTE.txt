@@ -1,0 +1,3 @@
+animation
+
+https://salehmubashar.com/blog/5-cool-animations-in-react-with-framer-motion

@@ -3,7 +3,7 @@ import { GlowMouse } from "./GlowMouse";
 
 function App() {
   return (
-    <main className="px-36">
+    <main className="px-44">
       <GlowMouse />
       <Home />
     </main>

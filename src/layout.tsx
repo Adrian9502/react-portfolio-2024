@@ -7,10 +7,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body>
-        <GlowMouse /> {/* <--- */}
+      <body className="relative z-10">
+        <GlowMouse />
         {children}
       </body>
     </html>
-  )
+  );
 }
