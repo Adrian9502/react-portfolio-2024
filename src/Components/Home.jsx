@@ -5,16 +5,6 @@ import { motion } from "framer-motion";
 import SocialIcons from "./Home/SocialIcons";
 
 export default function Home() {
-  // Animation variants for different text elements
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { staggerChildren: 1 },
-    },
-  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -24,7 +14,7 @@ export default function Home() {
     },
   };
 
-  // animation for doodle images
+  // Animation for doodle images
   const doodleVariants = {
     hidden: { y: 0 },
     visible: {
@@ -38,37 +28,140 @@ export default function Home() {
     },
   };
 
-  // Set a staggered delay based on the index
-  const getStaggeredDelay = (index) => index * 0.5; // Adjust multiplier as needed
+  // Staggered delay for doodles
+  const getStaggeredDelay = (index) => index * 0.5;
+
+  const socialLinks = [
+    {
+      Icon: FaFacebook,
+      link: "https://www.facebook.com/profile.php?id=100082782967903",
+      label: "Facebook Profile",
+    },
+    {
+      Icon: SiGmail,
+      link: "mailto:bontojohnadrian@gmail.com",
+      label: "Send Email",
+    },
+    {
+      Icon: FaGithub,
+      link: "https://github.com/Adrian9502",
+      label: "GitHub Profile",
+    },
+    {
+      Icon: FaLinkedinIn,
+      link: "https://www.linkedin.com/in/john-adrian-bonto-a65704283/",
+      label: "LinkedIn Profile",
+    },
+  ];
+
+  const doodles = [
+    {
+      // top side
+      // cyclist
+      src: "/Home/doodle2.png",
+      className:
+        "w-28 opacity-20 rotate-12 top-[20%] left-[60%] lg:top-[15%] lg:w-40",
+      alt: "doodle2",
+    },
+    {
+      // thinker
+      src: "/Home/doodle3.png",
+      className:
+        "w-28 opacity-20 rotate-12 top-36 left-[5%] lg:left-[18%] lg:w-40",
+      alt: "doodle3",
+    },
+    {
+      // programmer
+      src: "/Home/doodle6.png",
+      className:
+        "w-40 opacity-20 -rotate-45 top-24 right-8 lg:right-[18%] lg:top-32",
+      alt: "doodle6",
+    },
+    {
+      // coder
+      src: "/Home/doodle5.png",
+      className: "w-20 lg:w-32 opacity-20 rotate-12 top-32 left-[32%] ",
+      alt: "doodle5",
+    },
+    // bottom side
+    {
+      // BICYCLE LEFT
+      src: "/Home/doodle13.png",
+      className:
+        "w-20 lg:w-32 opacity-20 left-8 top-[30%] lg:left-[15%] lg:top-[43%]",
+      alt: "doodle13",
+    },
+    {
+      // REACT
+      src: "/Home/doodle10.png",
+      className:
+        "w-20 lg:w-28 opacity-20 right-12 top-[30%] lg:top-[55%] lg:right-[29%]",
+      alt: "doodle10",
+    },
+    {
+      // DOODLE LINE
+      src: "/Home/doodle11.png",
+      className:
+        "w-32 lg:w-48 opacity-20 left-20 bottom-[10%] left-12 lg:left-[20%]",
+      alt: "doodle11",
+    },
+    {
+      // CODE
+      src: "/Home/doodle9.png",
+      className:
+        "w-32 opacity-20 -rotate-45 top-[60%] lg:top-[55%] left-20 lg:left-[30%]",
+      alt: "doodle9",
+    },
+    {
+      // MIDDLE BICYCLE
+      src: "/Home/doodle4.png",
+      className:
+        "w-20 lg:w-32 opacity-20 -rotate-45 bottom-[10%] right-[12%] lg:left-[50%]",
+      alt: "doodle4",
+    },
+    {
+      // PC
+      src: "/Home/doodle7.png",
+      className:
+        "w-32 opacity-20 rotate-12 right-20 top-[58%] right-[10%] lg:right-[23%] lg:top-[75%]",
+      alt: "doodle7",
+    },
+  ];
 
   return (
-    <div className="w-full relative h-[90vh] flex pt-32 justify-center gap-5">
+    <div className="w-full border-cyan-300 flex pt-32 justify-center gap-5">
       <motion.div
-        className="w-full flex flex-col items-center space-y-3 text-slate-300 "
+        className="w-full flex text-center flex-col items-center space-y-3 justify-center text-slate-300"
         initial="hidden"
         animate="visible"
       >
-        <motion.div className="text-xl" variants={itemVariants}>
+        <motion.div
+          className="text-base rounded-lg p-2 md:text-lg lg:text-xl"
+          variants={itemVariants}
+        >
           Hello! I&apos;m John Adrian.
         </motion.div>
 
-        <motion.div className="text-2xl tracking-wider" variants={itemVariants}>
-          A passionate <br />
+        <motion.div
+          className="text-xl md:text-2xl lg:text-2xl  flex flex-col items-center lg:items-stretch"
+          variants={itemVariants}
+        >
+          A passionate
           <motion.span
-            className="text-custom-cyan ml-10 pt-5 text-[80px] leading-none font-bold"
+            className="text-custom-cyan lg:ml-10 lg:py-3 text-5xl lg:text-[85px] md:text-6xl lg:font-semibold font-bold"
             variants={itemVariants}
           >
             Web Developer
           </motion.span>
           specializing in
           <motion.div
-            className="text-custom-cyan ml-10 text-nowrap mb-1 text-[80px] leading-none font-bold"
+            className="text-custom-cyan text-nowrap lg:py-3 mb-1 text-5xl md:text-6xl lg:text-[85px] lg:font-semibold lg:ml-10 font-bold"
             variants={itemVariants}
           >
             Front-End Development.
           </motion.div>
           <motion.div
-            className="mt-3 text-xl text-center tracking-normal"
+            className="mt-3 text-sm md:text-base lg:text-xl text-center tracking-normal"
             variants={itemVariants}
           >
             Creating engaging, responsive, and user-friendly websites with
@@ -78,112 +171,38 @@ export default function Home() {
 
         {/* Social icons */}
         <div className="flex items-center justify-center gap-3">
-          <SocialIcons
-            Icon={FaFacebook}
-            link="https://www.facebook.com/profile.php?id=100082782967903"
-            label="Facebook Profile"
-          />
-          <SocialIcons
-            Icon={SiGmail}
-            link="mailto:bontojohnadrian@gmail.com"
-            label="Send Email"
-          />
-          <SocialIcons
-            Icon={FaGithub}
-            link="https://github.com/Adrian9502"
-            label="GitHub Profile"
-          />
-          <SocialIcons
-            Icon={FaLinkedinIn}
-            link="https://www.linkedin.com/in/john-adrian-bonto-a65704283/"
-            label="LinkedIn Profile"
-          />
+          {socialLinks.map((social, index) => (
+            <SocialIcons
+              key={index}
+              Icon={social.Icon}
+              link={social.link}
+              label={social.label}
+            />
+          ))}
         </div>
 
-        {/* Logos and explore button */}
-        <div className="flex flex-col items-center justify-center w-full gap-40 pt-7">
-          {[
-            // top section
-            {
-              src: "/Home/doodle2.png",
-              className: "w-40 opacity-20 rotate-12 top-12 left-[60%]",
-              alt: "doodle2",
-            },
-            {
-              src: "/Home/doodle3.png",
-              className: "w-40 opacity-20 rotate-12 top-8 left-32",
-              alt: "doodle3",
-            },
-            {
-              src: "/Home/doodle6.png",
-              className: "w-40 opacity-20 -rotate-45 top-2 right-32",
-              alt: "doodle6",
-            },
-            {
-              src: "/Home/doodle5.png",
-              className: "w-32 opacity-20 rotate-12 top-10 left-[25%]",
-              alt: "doodle5",
-            },
-            // sides
-            {
-              src: "/Home/doodle13.png",
-              className: "w-32 opacity-20 left-20 top-[40%]",
-              alt: "doodle13",
-            },
-            {
-              src: "/Home/doodle10.png",
-              className: "w-28 opacity-20 right-20 top-[40%]",
-              alt: "doodle10",
-            },
-            // bottom section
-            // left side
-            {
-              src: "/Home/doodle11.png",
-              className: "w-48 opacity-20 left-20 top-[80%]",
-              alt: "doodle11",
-            },
-            {
-              src: "/Home/doodle9.png",
-              className: "w-32 opacity-20 -rotate-45 top-[57%] left-72",
-              alt: "doodle9",
-            },
-            {
-              src: "/Home/doodle4.png",
-              className: "w-32 opacity-20 -rotate-45 top-[70%] left-[34%]",
-              alt: "doodle4",
-            },
-            // right side
-            {
-              src: "/Home/doodle7.png",
-              className: "opacity-20 rotate-12 right-20 top-[73%]",
-              alt: "doodle1",
-            },
-            {
-              src: "/Home/doodle8.png",
-              className: "w-32 opacity-20 rotate-12 top-[57%] right-72",
-              alt: "doodle9",
-            },
-            {
-              src: "/Home/doodle12.png",
-              className: "w-32 opacity-20 rotate-45 top-[70%] right-[34%]",
-              alt: "doodle10",
-            },
-          ].map((logo, index) => (
+        {/* doodle and Explore button */}
+        <div className="flex flex-col items-center justify-center w-full lg:gap-40 ">
+          {doodles.map((doodle, index) => (
             <motion.img
               key={index}
-              src={logo.src}
-              className={`absolute pointer-events-none ${logo.className}`}
-              alt={logo.alt}
+              src={doodle.src}
+              className={`absolute pointer-events-none ${doodle.className}`}
+              alt={doodle.alt}
               variants={doodleVariants}
               initial="hidden"
               animate="visible"
-              transition={{ delay: getStaggeredDelay(index) }} // Staggered delay based on index
+              transition={{ delay: getStaggeredDelay(index) }}
             />
           ))}
 
-          <span className="flex items-center gap-5 justify-center px-7 py-3 text-xl cursor-pointer rounded-lg border border-custom-cyan hover:bg-slate-950 transition">
+          <span className="flex items-center mt-20 gap-5 justify-center text-base px-4 py-2 md:px-5 md:py-3 lg:px-7 lg:py-3 lg:text-xl cursor-pointer rounded-lg border border-custom-cyan hover:bg-slate-950 transition">
             Explore
-            <img src="/Home/biking gif.gif" className="w-10" alt="biking gif" />
+            <img
+              src="/Home/biking gif.gif"
+              className="w-7 lg:w-10 pointer-events-none"
+              alt="biking gif"
+            />
           </span>
 
           <iframe

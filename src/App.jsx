@@ -6,11 +6,11 @@ import { GlowMouse } from "./GlowMouse";
 
 function App() {
   return (
-    <main className="px-60">
+    <main className="px-5 relative md:px-14 lg:px-60 ">
       <GlowMouse />
       <Header />
       <Home />
-      <About />
+      {/* <About /> */}
     </main>
   );
 }
