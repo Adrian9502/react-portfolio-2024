@@ -95,7 +95,7 @@ export default function Home() {
       // REACT
       src: "/Home/doodle10.png",
       className:
-        "w-20 lg:w-28 opacity-20 right-12 top-[30%] lg:top-[55%] lg:right-[29%]",
+        "w-20 lg:w-28 opacity-20 right-12 top-[30%] lg:top-[50%] lg:right-[15%]",
       alt: "doodle10",
     },
     {
