@@ -9,7 +9,7 @@ export default function About() {
       <div className="flex pointer-events-none items-center justify-around mt-10">
         <div className="p-10 relative leading-10 text-center text-2xl text-slate-300">
           My name is <br />
-          <div className="relative  text-custom-cyan text-6xl font-bold">
+          <div className="  text-custom-cyan text-6xl font-bold">
             John Adrian Bonto
           </div>
           <span className="text-base">

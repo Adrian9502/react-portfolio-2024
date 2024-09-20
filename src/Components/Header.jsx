@@ -5,7 +5,7 @@ export default function Header() {
       <section>
         <img className="w-24" src="/Header/header-logo.png" alt="Header Logo" />
       </section>
-      <div className="text-slate-300 text-base lg:text-lg flex gap-2">
+      <div className="text-slate-300 text-sm lg:text-lg flex flex-nowrap gap-2">
         <nav className="nav-item hover:text-custom-cyan">Home</nav>
         <div className="nav-item hover:text-custom-cyan">Certification</div>
         <div className="nav-item hover:text-custom-cyan">Projects</div>
