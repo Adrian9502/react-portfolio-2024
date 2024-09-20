@@ -1,7 +1,7 @@
 import "./Header/header.css";
 export default function Header() {
   return (
-    <header className="sticky p-5 flex items-center justify-between">
+    <header className="sticky top-0 z-20 p-5 flex items-center justify-between">
       <section>
         <img className="h-8" src="/Header/header-logo.png" alt="Header Logo" />
       </section>

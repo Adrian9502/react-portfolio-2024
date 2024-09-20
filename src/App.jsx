@@ -1,3 +1,4 @@
+import About from "./Components/About";
 import Certification from "./Components/Certification";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
@@ -9,6 +10,7 @@ function App() {
       <GlowMouse />
       <Header />
       <Home />
+      <About />
     </main>
   );
 }

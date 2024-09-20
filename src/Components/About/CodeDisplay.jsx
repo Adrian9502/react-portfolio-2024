@@ -1,6 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { motion } from "framer-motion"; // Import framer-motion
 
 // Helper function for indenting text
 const indent = (spaces) => " ".repeat(spaces);
@@ -40,13 +39,9 @@ function ColorfulText({ words }) {
   return (
     <div>
       {words.map((word, index) => (
-        <motion.span
-          key={index}
-          className={word.color}
-          variants={itemVariants} // Apply animation to each word
-        >
+        <span key={index} className={word.color}>
           {word.text}
-        </motion.span>
+        </span>
       ))}
     </div>
   );
@@ -143,16 +138,10 @@ export default function CodeDisplay() {
   ];
 
   const { typedWords, currentText } = useTypingAnimation(words);
-  const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
 
   return (
-    <motion.div
-      className="z-20 flex w-2/6 h-fit flex-col items-center transition-all"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants} // Apply container animation
-    >
-      <div className="w-full bg-slate-200 h-7 rounded-tl-lg rounded-tr-lg flex items-center pl-2 gap-1">
+    <div className="z-20 flex h-fit flex-col items-center transition-all">
+      <div className="w-full bg-slate-200 h-7 rounded-tl-lg rounded-tr-lg border flex items-center pl-2 gap-1">
         <span className="w-3 h-3 rounded-full bg-red-500"></span>
         <span className="w-3 h-3 rounded-full bg-orange-500"></span>
         <span className="w-3 h-3 rounded-full bg-green-500"></span>
@@ -167,6 +156,6 @@ export default function CodeDisplay() {
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
