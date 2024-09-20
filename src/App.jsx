@@ -6,7 +6,7 @@ import { GlowMouse } from "./GlowMouse";
 
 function App() {
   return (
-    <main className="px-80">
+    <main className="px-60">
       <GlowMouse />
       <Header />
       <Home />
