@@ -10,7 +10,7 @@ function App() {
       <GlowMouse />
       <Header />
       <Home />
-      {/* <About /> */}
+      <About />
     </main>
   );
 }

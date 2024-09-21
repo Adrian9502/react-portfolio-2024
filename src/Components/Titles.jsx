@@ -1,10 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Titles({ title }) {
   return (
-    <div className="text-4xl flex items-center justify-center p-3 gap-5 text-slate-300">
-      <span className="text-nowrap">{title}</span>{" "}
-      <img src="/line doodle.png" />{" "}
+    <div className="flex items-center justify-center p-3 gap-5 text-slate-300">
+      <div className="h-2 rounded-lg bg-custom-cyan flex-1"></div>
+      <div className="text-xl lg:text-4xl whitespace-nowrap">{title}</div>
+      <div className="h-2 rounded-lg bg-custom-cyan flex-1"></div>
     </div>
   );
 }
+
+Titles.propTypes = {
+  title: PropTypes.string.isRequired,
+};

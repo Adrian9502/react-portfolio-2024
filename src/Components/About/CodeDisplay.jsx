@@ -56,31 +56,6 @@ ColorfulText.propTypes = {
   ).isRequired,
 };
 
-// Animation variants for container and items
-const containerVariants = {
-  hidden: { opacity: 0, y: 50, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      staggerChildren: 0.1, // Stagger the appearance of each word
-      duration: 2, // Duration of the transition
-      ease: "easeInOut", // Smooth easing function
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.8 }, // Start from below and scaled down
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 1, ease: "easeInOut" }, // Smooth ease-in-out transition
-  },
-};
-
 export default function CodeDisplay() {
   const words = [
     { text: "const ", color: "text-indigo-400" },
@@ -140,14 +115,14 @@ export default function CodeDisplay() {
   const { typedWords, currentText } = useTypingAnimation(words);
 
   return (
-    <div className="z-20 flex h-fit flex-col items-center transition-all">
-      <div className="w-full bg-slate-200 h-7 rounded-tl-lg rounded-tr-lg border flex items-center pl-2 gap-1">
+    <div className="z-20 flex flex-col items-center transition-all p-4">
+      <div className="w-full bg-slate-200 h-7 rounded-tl-lg rounded-tr-lg flex items-center pl-2 gap-1">
         <span className="w-3 h-3 rounded-full bg-red-500"></span>
         <span className="w-3 h-3 rounded-full bg-orange-500"></span>
         <span className="w-3 h-3 rounded-full bg-green-500"></span>
       </div>
-      <div className="text-lg p-1 w-[571.93px] h-[354.1px] bg-slate-900/80 border rounded-bl-lg rounded-br-lg whitespace-pre-wrap text-slate-100">
-        <div className="jetbrains w-full h-full text-wrap text-base p-1">
+      <div className="text-lg p-1 w-full sm:w-[571.93px] sm:h-[354.1px] bg-slate-900/80 border rounded-bl-lg rounded-br-lg whitespace-pre-wrap text-slate-100">
+        <div className="jetbrains w-full h-full text-wrap text-sm sm:text-base p-1">
           <ColorfulText
             words={[
               ...typedWords,
