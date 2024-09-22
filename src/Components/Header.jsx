@@ -3,7 +3,7 @@ import "./Header/header.css";
 
 export default function Header() {
   return (
-    <header className="sticky rounded-bl-lg rounded-br-lg top-0 z-20 p-5 flex items-center justify-between">
+    <header className="sticky rounded-bl-lg rounded-br-lg top-0 left-0 right-0 z-20 p-3 flex items-center justify-between">
       <section>
         <Link to="/">
           <img
@@ -13,7 +13,7 @@ export default function Header() {
           />
         </Link>
       </section>
-      <section className="text-slate-300 text-sm lg:text-lg flex flex-nowrap gap-2">
+      <section className="text-slate-300 text-sm lg:text-base flex flex-nowrap gap-2">
         <nav className="nav-item hover:text-custom-cyan">Home</nav>
         <nav className="nav-item hover:text-custom-cyan">Certification</nav>
         <nav className="nav-item hover:text-custom-cyan">Projects</nav>

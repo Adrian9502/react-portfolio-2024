@@ -6,7 +6,7 @@
 }
 header {
   background: rgba(0, 10, 31, 0.829);
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(9px);
 }
 .nav-item::after {
