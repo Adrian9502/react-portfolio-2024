@@ -1,10 +1,10 @@
-import "../index.css";
+import "../../index.css";
 import { FaFacebook, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { motion } from "framer-motion";
-import SocialIcons from "./Home/SocialIcons";
+import SocialIcons from "./SocialIcons";
 import { useState } from "react";
-export default function Home({ scrollToAbout }) {
+export default function Introduction({ scrollToAbout }) {
   // state for hovering in bicycle
   const [imageSrc, setImageSrc] = useState("/biking-static.png");
   const [isHovered, setIsHovered] = useState(false);

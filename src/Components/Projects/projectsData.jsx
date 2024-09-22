@@ -71,9 +71,9 @@ const projectsData = [
   // Quiz game
   {
     img: "https://github.com/Adrian9502/js-quiz-game-pixel-theme/blob/main/github-img/image3.png?raw=true",
-    title: "Quiz Game - Software Engineering 1 Prototype (2nd year)",
+    title: "Algorithm Quiz Game ",
     description:
-      "Mastering Sorting Algorithms and Binary Operations : A Web-based game learning system. A Software Engineering 1 Project presented to the faculty of Department of Computing and Informatics of the City College of Calamba.",
+      "Prototype from our Software Engineering 1 subject. It aims to teach students how algorithms and binary operations work.",
     siteLink: "https://js-quiz-game-pixel-theme.vercel.app",
     siteCode: "https://github.com/Adrian9502/js-quiz-game-pixel-theme",
     techStack: [
@@ -85,7 +85,7 @@ const projectsData = [
   // Portfolio template
   {
     img: "https://github.com/Adrian9502/portfolio-template-with-glitch-animations/blob/main/img-thumb/1.png?raw=true",
-    title: "Portfolio Template - Glitch Effect",
+    title: "Portfolio Template - Glitch",
     description:
       "This is the mini project i've created with purple theme and glitch,flick effect animation with customized glowing cursor.",
     siteLink: "https://portfolio-template-with-glitch-animations.vercel.app",
@@ -113,7 +113,7 @@ const projectsData = [
   // Arise game review
   {
     img: "https://github.com/Adrian9502/Arise-Game-Review/blob/main/image_2024-09-01_214035526.png?raw=true",
-    title: "Arise - game review website",
+    title: "Arise - Game Review",
     description:
       "This is my first website project and also this is our first website project in school at 2nd year college. Finished - February 13, 2024",
     siteLink: "https://arise-game-review.vercel.app",
@@ -193,9 +193,9 @@ const projectsData = [
       { text: "Bootstrap", icon: FaBootstrap },
     ],
   },
-  // color picker
+  // color picker react
   {
-    img: "https://github.com/Adrian9502/react-color-picker/blob/main/thumbnail.png?raw=true",
+    img: "https://github.com/Adrian9502/react-color-picker/blob/main/image_2024-09-22_203349362.png?raw=true",
     title: "Color Picker App",
     description:
       "A simple Color Picker application built with React. This app allows users to select and view different colors. Understanding how useState work in ReactJS",
@@ -277,7 +277,7 @@ const projectsData = [
   // Rock paper scissors
   {
     img: "https://github.com/Adrian9502/JS-rock-paper-scissors/blob/main/img-thumb/2.png?raw=true",
-    title: "Rock, Paper, Scissors Game - JavaScript",
+    title: "Rock-Paper-Scissors",
     description: "Simple rock paper scissors in javascript.",
     siteLink: "https://js-rock-paper-scissors-ruddy.vercel.app",
     siteCode: "https://github.com/Adrian9502/JS-rock-paper-scissors",
@@ -290,7 +290,7 @@ const projectsData = [
   // Amazon Clone - E commerce
   {
     img: "https://github.com/Adrian9502/js-amazon-clone/blob/main/img-thumb/1.png?raw=true",
-    title: "Amazon clone - E-commerce",
+    title: "Amazon clone - Vanilla JS",
     description:
       "This Amazon clone project, inspired by a YouTube tutorial, uses the Fetch API and covers concepts like async/await, promises, and URL parameters. It significantly boosted my JavaScript skills.",
     siteLink: "https://js-amazon-clone.vercel.app",

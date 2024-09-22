@@ -1,5 +1,5 @@
-import Titles from "./Titles";
-import CodeDisplay from "./About/CodeDisplay";
+import Titles from "../Titles";
+import CodeDisplay from "../About/CodeDisplay";
 export default function About() {
   return (
     <div id="about" className="flex flex-col p-14">

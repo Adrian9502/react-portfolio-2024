@@ -1,16 +1,21 @@
 import React from "react";
-import Titles from "./Titles";
+import { Link, useNavigate } from "react-router-dom";
+import Titles from "../Titles.jsx";
 import { useEffect } from "react";
-import projectsData from "./Projects/projectsData";
-import "./Projects/projects.css";
+import projectsData from "../Projects/projectsData.jsx";
+import ".././Projects/projects.css";
 import { FiGithub, FiLink } from "react-icons/fi";
-import { initializeEyeMovement } from "./Projects/eye.js";
+import { initializeEyeMovement } from "../Projects/eye.js";
 export default function Projects() {
+  const navigate = useNavigate();
+  const handleViewAll = () => {
+    navigate("/all-projects");
+  };
   useEffect(() => {
-    initializeEyeMovement(); // Call the function to set up the mousemove event
+    initializeEyeMovement();
   }, []);
   return (
-    <div className="p-14 move-area">
+    <div id="projects" className="p-14 move-area">
       <Titles title="Here’s a glimpse of my projects." />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
         {projectsData.slice(0, 6).map((project, index) => {
@@ -50,7 +55,7 @@ export default function Projects() {
                     href={project.siteCode}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-custom-cyan hover:text-custom-cyan/80"
+                    className="text-custom-cyan hover:text-custom-cyan/60"
                   >
                     <FiGithub />
                   </a>
@@ -65,9 +70,9 @@ export default function Projects() {
                 {project.techStack.map((tech, idx) => (
                   <div
                     key={idx}
-                    className="flex bg-cyan-950 shadow-lg text-white font-light rounded-md p-2 items-center gap-1"
+                    className="flex bg-slate-900 shadow-lg text-custom-cyan  rounded-md p-2 items-center gap-1"
                   >
-                    <tech.icon className="text-lg" />
+                    <tech.icon className="text-xl" />
                     <span className="text-sm">{tech.text}</span>
                   </div>
                 ))}
@@ -76,12 +81,16 @@ export default function Projects() {
           );
         })}
       </div>
-      <div className="mt-20 flex flex-col items-center gap-10 justify-center text-slate-300">
+      <div className="flex flex-col items-center gap-10 justify-center text-slate-300">
         <div className="text-center">
           <div>Hey, I have more!</div>
           <div>I&apos;ve created more than 20 projects to practice</div>
         </div>
-        <button className="flex items-center text-nowrap gap-2 justify-center rounded-lg text-2xl px-10 py-2 text-custom-cyan border border-custom-cyan">
+
+        <button
+          onClick={handleViewAll}
+          className="flex items-center text-nowrap gap-2 justify-center rounded-lg text-2xl px-10 py-2 text-custom-cyan border border-custom-cyan"
+        >
           View All
           <div className="container flex gap-1">
             <div className="eye"></div>
