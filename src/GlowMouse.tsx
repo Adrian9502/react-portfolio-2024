@@ -22,7 +22,7 @@ function GlowMouse() {
 
   return (
     <div
-      className="pointer-events-none fixed inset-0 z-0 transition-all duration-500 ease-out"
+      className="pointer-events-none fixed inset-0 z-30 transition-all duration-500 ease-out"
       ref={ref}
       style={{
         backgroundBlendMode: 'multiply', // Blends with the background
