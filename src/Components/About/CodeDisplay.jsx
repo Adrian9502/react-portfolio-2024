@@ -115,7 +115,7 @@ export default function CodeDisplay() {
   const { typedWords, currentText } = useTypingAnimation(words);
 
   return (
-    <div className="z-20 flex flex-col items-center transition-all p-4">
+    <div className="flex flex-col items-center transition-all p-4">
       <div className="w-full bg-slate-200 h-7 rounded-tl-lg rounded-tr-lg flex items-center pl-2 gap-1">
         <span className="w-3 h-3 rounded-full bg-red-500"></span>
         <span className="w-3 h-3 rounded-full bg-orange-500"></span>

@@ -4,7 +4,7 @@ import { SiGmail } from "react-icons/si";
 import { motion } from "framer-motion";
 import SocialIcons from "./Home/SocialIcons";
 
-export default function Home() {
+export default function Home({ scrollToAbout }) {
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -196,7 +196,15 @@ export default function Home() {
             />
           ))}
 
-          <span className="flex items-center mt-20 gap-5 justify-center text-base px-4 py-2 md:px-5 md:py-3 lg:px-7 lg:py-3 lg:text-xl cursor-pointer rounded-lg border border-custom-cyan hover:bg-slate-950 transition">
+          <span
+            onClick={() => {
+              const aboutSection = document.getElementById("about");
+              if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="flex items-center mt-20 gap-5 justify-center text-base px-4 py-2 md:px-5 md:py-3 lg:px-7 lg:py-3 lg:text-xl cursor-pointer rounded-lg border border-custom-cyan hover:bg-slate-950 transition"
+          >
             Explore
             <img
               src="/Home/biking gif.gif"
