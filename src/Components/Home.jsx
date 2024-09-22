@@ -3,8 +3,12 @@ import { FaFacebook, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { motion } from "framer-motion";
 import SocialIcons from "./Home/SocialIcons";
-
+import { useState } from "react";
 export default function Home({ scrollToAbout }) {
+  // state for hovering in bicycle
+  const [imageSrc, setImageSrc] = useState("/biking-static.png");
+  const [isHovered, setIsHovered] = useState(false);
+
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -203,16 +207,23 @@ export default function Home({ scrollToAbout }) {
                 aboutSection.scrollIntoView({ behavior: "smooth" });
               }
             }}
+            onMouseEnter={() => {
+              setImageSrc("/biking gif.gif"); // Set GIF when hovered
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setImageSrc("/biking-static.png"); // Set PNG when not hovered
+              setIsHovered(false);
+            }}
             className="flex items-center mt-20 gap-5 justify-center text-base px-4 py-2 md:px-5 md:py-3 lg:px-7 lg:py-3 lg:text-xl cursor-pointer rounded-lg border border-custom-cyan hover:bg-slate-950 transition"
           >
             Explore
             <img
-              src="/Home/biking gif.gif"
-              className="w-7 lg:w-10 pointer-events-none"
+              src={imageSrc}
+              className="w-7 lg:w-10 pointer-events-none transition-all"
               alt="biking gif"
             />
           </span>
-
           <iframe
             className="w-20"
             src="https://lottie.host/embed/7bf3af0d-e1bb-4e60-b2db-ca4493a39c41/9ZvnnjxxxB.json"
