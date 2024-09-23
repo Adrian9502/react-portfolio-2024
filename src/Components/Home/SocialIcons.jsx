@@ -9,7 +9,7 @@ export default function SocialIcons({ Icon, link, label }) {
       aria-label={label}
       className="group"
     >
-      <div className="p-2 border border-custom-cyan lg:p-4 rounded-lg transition hover:bg-slate-950">
+      <div className="p-2 border border-custom-cyan rounded-lg transition hover:bg-slate-950/80">
         <Icon
           className="transition-colors duration-300 group-hover:text-custom-cyan"
           size={20}

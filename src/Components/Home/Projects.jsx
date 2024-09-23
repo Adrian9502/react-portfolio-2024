@@ -17,8 +17,9 @@ export default function Projects() {
   return (
     <div id="projects" className="p-14 move-area">
       <Titles title="Here’s a glimpse of my projects." />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-        {projectsData.slice(0, 6).map((project, index) => {
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-10">
+        {projectsData.slice(0, 8).map((project, index) => {
+          const randomNumber = Math.floor(Math.random() * 6) + 1;
           return (
             <div key={index} className="text-white rounded-md">
               {/* thumbnail */}
@@ -29,7 +30,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                 >
                   <div className=" rounded-md ">
-                    <div className={`pattern-${index + 1} rounded-md p-4`}>
+                    <div className={`pattern-${randomNumber} rounded-md p-4`}>
                       <img
                         src={project.img}
                         alt={project.title}
@@ -82,14 +83,14 @@ export default function Projects() {
         })}
       </div>
       <div className="flex flex-col items-center gap-10 justify-center text-slate-300">
-        <div className="text-center">
+        <div className="text-center text-sm">
           <div>Hey, I have more!</div>
           <div>I&apos;ve created more than 20 projects to practice</div>
         </div>
 
         <button
           onClick={handleViewAll}
-          className="flex items-center text-nowrap gap-2 justify-center rounded-lg text-2xl px-10 py-2 text-custom-cyan border border-custom-cyan"
+          className="flex items-center text-nowrap gap-2 justify-center rounded-lg text-lg lg:text-2xl px-5 lg:px-10 py-2 text-custom-cyan border border-custom-cyan"
         >
           View All
           <div className="container flex gap-1">
