@@ -3,6 +3,7 @@ import About from "../Home/About";
 import Projects from "../Home/Projects";
 import Header from "../Header.jsx";
 import { useRef } from "react";
+import Certification from "../Home/Certification.jsx";
 export default function Home() {
   const aboutRef = useRef(null);
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Introduction />
       <About ref={aboutRef} />
       <Projects />
+      <Certification />
     </main>
   );
 }
