@@ -5,6 +5,7 @@ import certificate1 from "/certificates/assets/CareerEssentialsInSoftwareDevelop
 import certificate2 from "/certificates/assets/IntroductionToCareerSkillsInSoftwareDevelopment.png";
 import certificate3 from "/certificates/assets/ProgrammingFoundationsBeyondTheFundamentals.png";
 import certificate4 from "/certificates/assets/ProgrammingFoundationsFundamentals.png";
+import { IoMdDownload } from "react-icons/io";
 
 export default function Certifications() {
   const [selectedId, setSelectedId] = useState(null);
@@ -55,7 +56,7 @@ export default function Certifications() {
             <motion.div
               key={certificate.id}
               layoutId={certificate.id}
-              className="transition-all p-2 rounded-md overflow-hidden shadow-lg flex flex-col gap-3 cursor-pointer"
+              className="transition-all p-2 rounded-md overflow-hidden flex flex-col gap-3 cursor-pointer"
               onClick={() => setSelectedId(certificate.id)}
             >
               <div className="border rounded-md p-2 flex hover:-translate-y-2 transition-all">
@@ -64,7 +65,7 @@ export default function Certifications() {
                 >
                   <img
                     src={certificate.img}
-                    className="w-full rounded-md h-40 object-contain lg:object-cover"
+                    className="w-full pointer-events-none rounded-md h-40 object-contain lg:object-cover"
                     alt={certificate.title}
                   />
                 </div>
@@ -76,7 +77,7 @@ export default function Certifications() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={certificate.link}
-                  className="p-2 border border-custom-cyan bg-slate-900 hover:bg-slate-950 flex gap-2 hover:text-custom-cyan rounded-lg transition duration-300"
+                  className="p-2 border border-custom-cyan bg-slate-900 hover:bg-slate-950 flex items-center gap-2 hover:text-custom-cyan rounded-lg transition duration-300"
                 >
                   View link
                 </a>
@@ -84,9 +85,9 @@ export default function Certifications() {
                   onClick={(e) => e.stopPropagation()}
                   href={certificate.download}
                   download
-                  className="p-2 border border-custom-cyan bg-slate-900 hover:bg-slate-950 flex gap-2 hover:text-custom-cyan rounded-lg transition duration-300"
+                  className="p-2 border border-custom-cyan bg-slate-900 hover:bg-slate-950 flex items-center gap-2 hover:text-custom-cyan rounded-lg transition duration-300"
                 >
-                  Download PDF
+                  <IoMdDownload size={20} /> PDF
                 </a>
               </div>
             </motion.div>
@@ -117,7 +118,7 @@ export default function Certifications() {
                     <motion.img
                       src={certificate.img}
                       alt={certificate.title}
-                      className="w-full rounded-md mb-6"
+                      className="w-full pointer-events-none rounded-md mb-6"
                     />
                     <motion.h2 className="text-xl lg:text-2xl text-center font-medium tracking-wide mb-6">
                       {certificate.title}

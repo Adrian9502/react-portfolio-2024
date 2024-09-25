@@ -1,47 +1,55 @@
-import React from "react";
-import { FaHtml5, FaCss3, FaReact, FaBootstrap } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiPhp } from "react-icons/si";
-import { DiMysql } from "react-icons/di";
 import PropTypes from "prop-types";
-
-function TechStackIcon({ Icon, iconText }) {
+import skillsData from "../Skills/skillsData";
+function SkillsContainer({ svg, text }) {
   return (
-    <span className="bg-indigo-700 rounded-lg flex gap-2  items-center text-sm p-2">
-      <Icon size={25} />
-      {iconText}
-    </span>
-  );
-}
-TechStackIcon.propTypes = {
-  Icon: PropTypes.elementType.isRequired,
-  iconText: PropTypes.string.isRequired,
-};
-function SkillsContainer({ Icon, text }) {
-  return (
-    <div
-      className="bg-indigo-700 p-4 rounded-lg flex items-center justify-center gap-2 shadow-lg"
-      aria-label={text}
-    >
-      <Icon color="white" size={30} />
-      <span className="text-base font-medium">{text}</span>
+    <div className="flex hover:-translate-y-1 transition-all text-slate-400 hover:text-custom-cyan flex-col items-center gap-1">
+      <div
+        dangerouslySetInnerHTML={{ __html: svg }}
+        className="w-8 h-8 lg:w-11 lg:h-11"
+      />{" "}
+      <span className="text-xs">{text}</span>
     </div>
   );
 }
 
+SkillsContainer.propTypes = {
+  svg: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 export default function Skills() {
   return (
-    <div>
-      <div className="flex flex-wrap border-4 border-transparent bg-slate-900/30 glow:border-indigo-600 glow:bg-indigo-900/10 py-4 px-6 gap-4 rounded-lg mb-10">
-        <SkillsContainer Icon={FaHtml5} text={"HTML"} />
-        <SkillsContainer Icon={FaCss3} text={"CSS"} />
-        <SkillsContainer Icon={IoLogoJavascript} text={"JavaScript"} />
-        <SkillsContainer Icon={FaReact} text={"React"} />
-        <SkillsContainer Icon={RiTailwindCssFill} text={"Tailwind"} />
-        <SkillsContainer Icon={FaBootstrap} text={"Bootstrap"} />
-        <SkillsContainer Icon={SiPhp} text={"PHP"} />
-        <SkillsContainer Icon={DiMysql} text={"MySQL"} />
+    <div className=" p-14 text-slate-300">
+      <div className="h-1.5 bg-custom-cyan w-full rounded-lg mb-8"></div>
+      <div className="flex flex-col lg:flex-row  gap-3 lg:gap-10 ">
+        <div className="text-xl sm:text-2xl lg:text-3xl relative font-medium text-start mb-6">
+          These are my skills that I&apos;ve learned throughout my journey in
+          web development.
+          <img
+            src="/Home/doodle1.png"
+            className="absolute md:top-16 xl:left-2/4 right-0 -top-4 lg:top-32 lg:left-2/4 rotate-12 bottom-16 w-20"
+            alt="doodle1"
+          />
+          <img
+            src="/keyboard.png"
+            className="absolute  xl:left-3/4 xl:top-24 right-0 -bottom-4 md:-bottom-12 md:right-32 lg:right-4 lg:top-20 -rotate-45 md:w-16 w-24"
+            alt="keyboard"
+          />
+          <img
+            src="/lappy.png"
+            className="absolute hidden sm:block md:block lg:block xl:left-0 xl:top-24 left-[55%] bottom-2 md:left-2/4 md:top-16 lg:top-32 top-20 lg:left-10 rotate-12 w-14 lg:w-20"
+            alt="laptop"
+          />
+          <img
+            src="/stars.png"
+            className="absolute xl:left-1/4 xl:top-24 left-[35%] lg:top-32 lg:left-40 md:-bottom-12 md:left-10 -bottom-10 w-10 lg:w-14"
+            alt="stars"
+          />
+        </div>
+        <div className="flex flex-wrap gap-6 p-5 ">
+          {skillsData.map((skill, index) => (
+            <SkillsContainer key={index} svg={skill.svg} text={skill.text} />
+          ))}
+        </div>
       </div>
     </div>
   );
