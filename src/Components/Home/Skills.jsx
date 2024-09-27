@@ -18,7 +18,7 @@ SkillsContainer.propTypes = {
 };
 export default function Skills() {
   return (
-    <div className=" p-14 text-slate-300">
+    <div id="skills" className="p-14 text-slate-300">
       <div className="h-1.5 bg-custom-cyan w-full rounded-lg mb-8"></div>
       <div className="flex flex-col lg:flex-row  gap-3 lg:gap-10 ">
         <div className="text-xl sm:text-2xl lg:text-3xl relative font-medium text-start mb-6">
