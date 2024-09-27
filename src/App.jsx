@@ -4,13 +4,15 @@ import Pages from "./Components/Pages";
 
 function App() {
   return (
-    <Router>
-      <GlowMouse />
-      {/* pages containing Home component where all other components combined
+    <>
+      <Router>
+        <GlowMouse />
+        {/* pages containing Home component where all other components combined
           like about, projects, certification etc.
         */}
-      <Pages />
-    </Router>
+        <Pages />
+      </Router>
+    </>
   );
 }
 

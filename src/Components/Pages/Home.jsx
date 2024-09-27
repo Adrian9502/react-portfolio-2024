@@ -5,6 +5,8 @@ import Header from "../Header.jsx";
 import { useRef } from "react";
 import Certification from "../Home/Certification.jsx";
 import Skills from "../Home/Skills.jsx";
+import Footer from "../Footer.jsx";
+import Contact from "../Home/Contact.jsx";
 export default function Home() {
   const aboutRef = useRef(null);
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Projects />
       <Certification />
       <Skills />
+      <Contact />
+      <Footer />
     </main>
   );
 }
