@@ -14,9 +14,9 @@ export default function Home() {
       <Header />
       <Introduction />
       <About ref={aboutRef} />
+      <Skills />
       <Projects />
       <Certification />
-      <Skills />
       <Contact />
       <Footer />
     </main>

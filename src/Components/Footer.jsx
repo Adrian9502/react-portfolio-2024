@@ -69,7 +69,7 @@ export default function Footer() {
           </span>
           . All rights reserved.
           <br />
-          <span className="text-xs">
+          {/* <span className="text-xs">
             This design was inspired by{" "}
             <a
               href="https://braydentw.io"
@@ -79,7 +79,7 @@ export default function Footer() {
               Brayden TW
             </a>{" "}
             and fully coded by me.
-          </span>
+          </span> */}
         </p>
       </div>
 

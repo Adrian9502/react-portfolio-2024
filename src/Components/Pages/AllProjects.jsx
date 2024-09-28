@@ -2,6 +2,7 @@ import Titles from "../Titles";
 import projectsData from "../Projects/projectsData";
 import { FiGithub, FiLink } from "react-icons/fi";
 import ProjectHeader from "../Projects/ProjectHeader";
+import Footer from "../Footer";
 
 export default function AllProjects() {
   return (
@@ -100,6 +101,7 @@ export default function AllProjects() {
           })}
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

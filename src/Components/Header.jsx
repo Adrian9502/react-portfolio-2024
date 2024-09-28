@@ -20,15 +20,15 @@ export default function Header() {
         <a href="#About">
           <nav className="nav-item hover:text-custom-cyan">About</nav>
         </a>
+
+        <a href="#Skills">
+          <nav className="nav-item hover:text-custom-cyan">Skills</nav>
+        </a>
         <a href="#Projects">
           <nav className="nav-item hover:text-custom-cyan">Projects</nav>
         </a>
         <a href="#Certification">
           <nav className="nav-item hover:text-custom-cyan">Certification</nav>
-        </a>
-
-        <a href="#Skills">
-          <nav className="nav-item hover:text-custom-cyan">Skills</nav>
         </a>
         <a href="#Contact">
           <nav className="nav-item hover:text-custom-cyan">Contact</nav>
