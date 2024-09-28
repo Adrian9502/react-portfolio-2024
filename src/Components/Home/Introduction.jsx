@@ -133,7 +133,10 @@ export default function Introduction({ scrollToAbout }) {
   ];
 
   return (
-    <div className="w-full relative border-cyan-300 flex pt-32 justify-center gap-5">
+    <section
+      id="Introduction"
+      className="w-full relative border-cyan-300 flex pt-32 justify-center gap-5"
+    >
       <motion.div
         className="w-full flex text-center flex-col items-center space-y-3 justify-center text-slate-300"
         initial="hidden"
@@ -230,6 +233,6 @@ export default function Introduction({ scrollToAbout }) {
           ></iframe>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }

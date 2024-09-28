@@ -14,11 +14,25 @@ export default function Header() {
         </Link>
       </section>
       <section className="text-slate-300 text-sm lg:text-base flex flex-nowrap gap-2">
-        <nav className="nav-item hover:text-custom-cyan">Home</nav>
-        <nav className="nav-item hover:text-custom-cyan">Certification</nav>
-        <nav className="nav-item hover:text-custom-cyan">Projects</nav>
-        <nav className="nav-item hover:text-custom-cyan">Skills</nav>
-        <nav className="nav-item hover:text-custom-cyan">Contact</nav>
+        <a href="#Introduction">
+          <nav className="nav-item hover:text-custom-cyan">Home</nav>
+        </a>
+        <a href="#About">
+          <nav className="nav-item hover:text-custom-cyan">About</nav>
+        </a>
+        <a href="#Projects">
+          <nav className="nav-item hover:text-custom-cyan">Projects</nav>
+        </a>
+        <a href="#Certification">
+          <nav className="nav-item hover:text-custom-cyan">Certification</nav>
+        </a>
+
+        <a href="#Skills">
+          <nav className="nav-item hover:text-custom-cyan">Skills</nav>
+        </a>
+        <a href="#Contact">
+          <nav className="nav-item hover:text-custom-cyan">Contact</nav>
+        </a>
       </section>
     </header>
   );

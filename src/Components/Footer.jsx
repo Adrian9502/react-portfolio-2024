@@ -87,7 +87,10 @@ export default function Footer() {
       <div className="flex flex-col items-end">
         <div className="text-lg text-slate-300 mb-3">Quick Links</div>
         <div className="flex flex-wrap gap-4 text-slate-400">
-          <a href="#Home" className="hover:text-custom-cyan transition-colors">
+          <a
+            href="#Introduction"
+            className="hover:text-custom-cyan transition-colors"
+          >
             Home
           </a>
           <a href="#about" className="hover:text-custom-cyan transition-colors">

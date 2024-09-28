@@ -15,7 +15,7 @@ export default function Projects() {
     initializeEyeMovement();
   }, []);
   return (
-    <div id="projects" className="p-14 move-area">
+    <section id="Projects" className="p-14 move-area">
       <Titles title="Here’s a glimpse of my projects." />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-10">
         {projectsData.slice(0, 8).map((project, index) => {
@@ -99,6 +99,6 @@ export default function Projects() {
           </div>
         </button>
       </div>
-    </div>
+    </section>
   );
 }

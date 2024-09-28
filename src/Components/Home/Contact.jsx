@@ -16,7 +16,10 @@ const renderLetters = (text) => {
 
 export default function Contact() {
   return (
-    <section className="relative my-10 sm:my-16 lg:my-20 p-8 sm:p-10 lg:p-14 gap-8 sm:gap-10 flex flex-col items-center justify-center text-slate-300">
+    <section
+      id="Contact"
+      className="relative my-10 sm:my-16 lg:my-20 p-8 sm:p-10 lg:p-14 gap-8 sm:gap-10 flex flex-col items-center justify-center text-slate-300"
+    >
       {/* doodle14 */}
       <img
         src="/Home/doodle14.png"
