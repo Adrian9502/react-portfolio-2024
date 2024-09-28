@@ -1,9 +1,18 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header/header.css";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <header className="sticky rounded-bl-lg rounded-br-lg top-0 left-0 right-0 z-20 p-3 flex items-center justify-between">
+    <header className="sticky top-0 left-0 right-0 z-20 p-3 flex items-center justify-between">
+      {/* Logo Section */}
       <section>
         <Link to="/">
           <img
@@ -13,25 +22,53 @@ export default function Header() {
           />
         </Link>
       </section>
-      <section className="text-slate-300 text-sm lg:text-base flex flex-nowrap gap-2">
-        <a href="#Introduction">
-          <nav className="nav-item hover:text-custom-cyan">Home</nav>
-        </a>
-        <a href="#About">
-          <nav className="nav-item hover:text-custom-cyan">About</nav>
-        </a>
 
-        <a href="#Skills">
-          <nav className="nav-item hover:text-custom-cyan">Skills</nav>
+      {/* Hamburger Menu Icon */}
+      <div className="sm:hidden text-custom-cyan" onClick={toggleMenu}>
+        {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+      </div>
+
+      {/* Navigation Section (Mobile & Desktop) */}
+      <section
+        className={`${
+          menuOpen ? "flex flex-wrap" : "hidden"
+        } sm:flex header-menu justify-center flex-col items-end sm:flex-row sm:items-center absolute sm:static top-12 right-0 text-sm p-3 sm:p-0 text-slate-300 z-10`}
+      >
+        <a
+          href="#Introduction"
+          className="nav-item hover:text-custom-cyan sm:text-base"
+        >
+          Home
         </a>
-        <a href="#Projects">
-          <nav className="nav-item hover:text-custom-cyan">Projects</nav>
+        <a
+          href="#About"
+          className="nav-item hover:text-custom-cyan sm:text-base"
+        >
+          About
         </a>
-        <a href="#Certification">
-          <nav className="nav-item hover:text-custom-cyan">Certification</nav>
+        <a
+          href="#Skills"
+          className="nav-item hover:text-custom-cyan sm:text-base"
+        >
+          Skills
         </a>
-        <a href="#Contact">
-          <nav className="nav-item hover:text-custom-cyan">Contact</nav>
+        <a
+          href="#Projects"
+          className="nav-item hover:text-custom-cyan sm:text-base"
+        >
+          Projects
+        </a>
+        <a
+          href="#Certification"
+          className="nav-item hover:text-custom-cyan sm:text-base"
+        >
+          Certification
+        </a>
+        <a
+          href="#Contact"
+          className="nav-item hover:text-custom-cyan sm:text-base"
+        >
+          Contact
         </a>
       </section>
     </header>

@@ -8,12 +8,11 @@ import Skills from "../Home/Skills.jsx";
 import Footer from "../Footer.jsx";
 import Contact from "../Home/Contact.jsx";
 export default function Home() {
-  const aboutRef = useRef(null);
   return (
-    <main className="px-5 relative md:px-14 lg:px-16 xl:px-52">
+    <main className="relative sm:px-5 md:px-14 lg:px-16 xl:px-52">
       <Header />
       <Introduction />
-      <About ref={aboutRef} />
+      <About />
       <Skills />
       <Projects />
       <Certification />
