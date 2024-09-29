@@ -62,7 +62,7 @@ export default function Introduction() {
       // cyclist
       src: "/Home/doodle2.png",
       className:
-        "w-28 opacity-20 rotate-12 top-[6%] left-[50%] lg:top-[5%] lg:w-40",
+        "w-28 opacity-20 rotate-12 top-[12%] left-[50%] lg:top-[5%] lg:w-40",
       alt: "doodle2",
     },
     {

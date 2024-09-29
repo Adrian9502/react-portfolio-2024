@@ -10,6 +10,7 @@ import { IoMdDownload } from "react-icons/io";
 export default function Certifications() {
   const [selectedId, setSelectedId] = useState(null);
 
+  // array of objects containing the certificates information
   const certificates = [
     {
       id: "1",
@@ -46,7 +47,7 @@ export default function Certifications() {
   ];
 
   return (
-    <div className="p-14" id="Certification">
+    <section className="p-2 border my-20 sm:p-14" id="Certification">
       <Titles title="I completed online courses and earned certificates." />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
         {certificates.map((certificate) => {
@@ -154,6 +155,6 @@ export default function Certifications() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </section>
   );
 }
