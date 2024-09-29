@@ -204,7 +204,7 @@ export default function Introduction() {
             />
           ))}
 
-          <a href="#About">
+          <a href="#About" className="mt-20">
             <span
               onMouseEnter={() => {
                 setImageSrc("/biking gif.gif"); // Set GIF when hovered
@@ -212,7 +212,7 @@ export default function Introduction() {
               onMouseLeave={() => {
                 setImageSrc("/biking-static.png"); // Set PNG when not hovered
               }}
-              className="flex items-center mt-20 gap-5 justify-center text-base px-4 py-2 md:px-5 md:py-3 lg:px-7 lg:py-3 lg:text-xl cursor-pointer rounded-lg border border-custom-cyan hover:bg-slate-950 transition"
+              className="flex items-center  gap-5 justify-center text-base px-4 py-2 md:px-5 md:py-3 lg:px-7 lg:py-3 lg:text-xl cursor-pointer rounded-lg border border-custom-cyan hover:bg-slate-950 transition"
             >
               Explore
               <img

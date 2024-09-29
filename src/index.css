@@ -9,7 +9,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: #000319;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -20,7 +20,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #00c7ff#000a1f;
+  scrollbar-color: #00c7ff#000319;
 }
 
 html {
@@ -32,10 +32,6 @@ html {
   font-family: "JetBrains Mono", system-ui !important;
 }
 ::selection {
-  background-color: rgb(
-    9,
-    3,
-    63
-  ); /* Change this to your desired background color */
-  color: #00c7ff; /* Change this to your desired text color */
+  background-color: rgb(9, 3, 63);
+  color: #00c7ff;
 }
