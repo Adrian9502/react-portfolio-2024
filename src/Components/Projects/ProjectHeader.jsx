@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import ".././Header/header.css";
-import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function ProjectHeader() {
@@ -8,7 +7,7 @@ export default function ProjectHeader() {
     window.scrollTo(0, 0); // Scroll to the top of the page
   }, []);
   return (
-    <header className="sticky rounded-bl-lg rounded-br-lg top-0 left-0 right-0 z-20 p-3 flex items-center justify-between">
+    <header className="sticky shadow-sm shadow-custom-cyan sm:shadow-none top-0 left-0 right-0 z-20 p-1 flex items-center justify-between">
       <section>
         <Link to="/">
           <img

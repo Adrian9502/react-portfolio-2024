@@ -8,8 +8,8 @@ export default function AllProjects() {
   return (
     <section className="xl:px-40 lg:px-14">
       <ProjectHeader />
-      <div className="p-14 flex flex-col items-center">
-        <div className="relative text-4xl lg:text-6xl text-center font-semibold tracking-wider text-custom-cyan">
+      <div className="p-3 sm:p-14 flex flex-col items-center">
+        <div className="relative mt-10 sm:mt-0 text-4xl lg:text-6xl text-center font-semibold tracking-wider text-custom-cyan">
           <span>
             Projects
             <img
