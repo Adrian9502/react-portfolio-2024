@@ -12,8 +12,8 @@ export default function Home() {
     <main className="relative sm:px-5 md:px-14 lg:px-16 xl:px-52">
       <Header />
       <Introduction />
-      {/* <About />
-      <Skills />
+      <About />
+      {/* <Skills />
       <Projects />
       <Certification />
       <Contact />

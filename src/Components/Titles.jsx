@@ -3,9 +3,12 @@ import PropTypes from "prop-types";
 
 export default function Titles({ title }) {
   return (
-    <div className="flex items-center py-2 justify-center gap-5 text-slate-300">
-      <div className="text-xl lg:text-4xl text-nowrap">{title}</div>
-      <div className="h-2 rounded-lg bg-custom-cyan w-full"></div>
+    <div className="flex flex-col items-center px-2 py-2 justify-center gap-5 font-semibold text-slate-300">
+      {/* Title text */}
+      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">{title}</div>
+
+      {/* Cyan divider with responsive width */}
+      <div className="h-1.5 md:h-2 rounded-lg bg-custom-cyan w-full"></div>
     </div>
   );
 }

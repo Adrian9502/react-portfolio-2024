@@ -63,50 +63,40 @@ export default function CodeDisplay() {
     { text: "= ", color: "text-orange-500" },
     { text: "{\n", color: "text-lime-400" },
     { text: indent(4) + "role: ", color: "text-sky-400" },
-    { text: `"Aspiring Web Developer",\n`, color: "text-lime-400" },
+    { text: `"Web Developer",\n`, color: "text-lime-400" },
     { text: indent(4) + "hobbies: ", color: "text-sky-400" },
-    { text: `"Coding, Cycling",\n`, color: "text-lime-400" },
-    { text: indent(4) + "goals: ", color: "text-sky-400" },
-    {
-      text: `"To become a Senior Software Engineer.",\n`,
-      color: "text-lime-400",
-    },
+    { text: `"Cycling, Exploring",\n`, color: "text-lime-400" },
     { text: indent(4) + "passion: ", color: "text-sky-400" },
     {
-      text: `"Improve coding and continuous learning.",\n`,
-      color: "text-lime-400",
-    },
-    { text: indent(4) + "profileSummary: ", color: "text-sky-400" },
-    {
-      text: `"A web developer and Computer Science\n`,
+      text: `"I'm a web developer with a degree in \n`,
       color: "text-lime-400",
     },
     {
-      text: indent(7) + " student specializing in front-end development. I \n",
+      text: indent(6) + "Computer Science, focused on building intuitive,\n",
       color: "text-lime-400",
     },
     {
-      text: indent(8) + "focus on building intuitive, responsive web \n",
+      text: indent(6) + "responsive web applications. Outside of coding,\n",
       color: "text-lime-400",
     },
     {
-      text: indent(8) + "applications. Outside of coding, I enjoy cycling \n",
+      text: indent(6) + "I love cycling and exploring, which fuel my \n",
       color: "text-lime-400",
     },
     {
-      text: indent(8) + "and exploring, which fuels my creativity and \n",
+      text: indent(6) + "creativity and help with problem-solving. \n",
       color: "text-lime-400",
     },
     {
-      text: indent(8) + "problem-solving. My goal is to become a senior \n",
+      text: indent(6) + "I'm passionate about working on meaningful\n",
       color: "text-lime-400",
     },
     {
-      text: indent(8) + "software engineer, leading impactful projects and \n",
+      text: indent(6) + "projects and am always eager to learn new \n",
       color: "text-lime-400",
     },
     {
-      text: indent(8) + "embracing new technologies.\n",
+      text: indent(6) + "technologies.\n",
       color: "text-lime-400",
     },
     { text: "};", color: "text-lime-400" },
@@ -121,8 +111,8 @@ export default function CodeDisplay() {
         <span className="w-3 h-3 rounded-full bg-orange-500"></span>
         <span className="w-3 h-3 rounded-full bg-green-500"></span>
       </div>
-      <div className="text-lg p-1 w-full sm:w-[571.93px] sm:h-[354.1px] bg-slate-900/80 border rounded-bl-lg rounded-br-lg whitespace-pre-wrap text-slate-100">
-        <div className="jetbrains w-full h-full text-wrap text-sm sm:text-base p-1">
+      <div className="text-lg p-3 bg-slate-900/80 border rounded-bl-lg rounded-br-lg w-full h-full text-slate-100 overflow-hidden ">
+        <div className="jetbrains w-full h-full sm:w-[538px] sm:h-[306px] text-wrap text-sm sm:text-base p-1 whitespace-pre-line sm:whitespace-pre">
           <ColorfulText
             words={[
               ...typedWords,
