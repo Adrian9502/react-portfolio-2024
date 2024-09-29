@@ -15,10 +15,10 @@ export default function Projects() {
     initializeEyeMovement();
   }, []);
   return (
-    <section id="Projects" className="p-14 move-area">
+    <section id="Projects" className="p-3 sm:p-14 move-area">
       <Titles title="Here’s a glimpse of my projects." />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-10">
-        {projectsData.slice(0, 8).map((project, index) => {
+        {projectsData.slice(0, 4).map((project, index) => {
           const randomNumber = Math.floor(Math.random() * 6) + 1;
           return (
             <div key={index} className="text-white rounded-md">
@@ -90,7 +90,7 @@ export default function Projects() {
 
         <button
           onClick={handleViewAll}
-          className="flex items-center text-nowrap gap-2 justify-center rounded-lg text-lg lg:text-2xl px-5 lg:px-10 py-2 text-custom-cyan border border-custom-cyan"
+          className="flex items-center text-nowrap gap-2 justify-center rounded-lg sm:text-lg lg:text-2xl sm:px-5 px-3 lg:px-10 py-2 text-custom-cyan border border-custom-cyan"
         >
           View All
           <div className="container flex gap-1">
