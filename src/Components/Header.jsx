@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-20 p-3 flex items-center justify-between">
+    <header className="sticky rounded-md shadow-sm shadow-custom-cyan sm:shadow-none top-0 left-0 right-0 z-20 p-3 flex items-center justify-between">
       {/* Logo Section */}
       <section>
         <Link to="/">
@@ -31,8 +31,8 @@ export default function Header() {
       {/* Navigation Section (Mobile & Desktop) */}
       <section
         className={`${
-          menuOpen ? "flex flex-wrap" : "hidden"
-        } sm:flex header-menu justify-center flex-col items-end sm:flex-row sm:items-center absolute sm:static top-12 right-0 text-sm p-3 sm:p-0 text-slate-300 z-10`}
+          menuOpen ? "flex flex-wrap shadow-md  shadow-custom-cyan" : "hidden"
+        } sm:flex header-menu justify-center  items-end sm:flex-row sm:items-center absolute sm:static top-16 rounded-md right-0 text-sm text-slate-300 z-10`}
       >
         <a
           href="#Introduction"
