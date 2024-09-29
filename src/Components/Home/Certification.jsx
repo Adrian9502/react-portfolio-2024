@@ -6,6 +6,7 @@ import certificate2 from "/certificates/assets/IntroductionToCareerSkillsInSoftw
 import certificate3 from "/certificates/assets/ProgrammingFoundationsBeyondTheFundamentals.png";
 import certificate4 from "/certificates/assets/ProgrammingFoundationsFundamentals.png";
 import { IoMdDownload } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 
 export default function Certifications() {
   const [selectedId, setSelectedId] = useState(null);
@@ -106,7 +107,7 @@ export default function Certifications() {
             onClick={() => setSelectedId(null)}
           >
             <motion.div
-              className="bg-slate-900 rounded-md overflow-hidden shadow-lg p-6 text-white max-w-xl w-full"
+              className="bg-slate-950 rounded-md overflow-hidden shadow-lg p-6 text-white max-w-xl w-full"
               onClick={(e) => e.stopPropagation()}
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
@@ -124,7 +125,7 @@ export default function Certifications() {
                     <motion.h2 className="text-xl lg:text-2xl text-center font-medium tracking-wide mb-6">
                       {certificate.title}
                     </motion.h2>
-                    <div className="flex items-center justify-center gap-4">
+                    <div className="flex items-center justify-center text-sm sm:text-base gap-4">
                       <a
                         onClick={(e) => e.stopPropagation()}
                         target="_blank"
@@ -138,16 +139,16 @@ export default function Certifications() {
                         onClick={(e) => e.stopPropagation()}
                         href={certificate.download}
                         download
-                        className="p-2 border border-custom-cyan bg-slate-900 hover:bg-slate-950 flex gap-2 hover:text-custom-cyan rounded-lg transition duration-300"
+                        className="p-2 border border-custom-cyan bg-slate-900 hover:bg-slate-950 flex items-center gap-2 hover:text-custom-cyan rounded-lg transition duration-300"
                       >
-                        Download PDF
+                        <IoMdDownload size={20} /> PDF
                       </a>
                     </div>
                     <motion.button
                       className="mt-4 p-2 border hover:bg-slate-800 transition-all border-custom-cyan rounded-lg"
                       onClick={() => setSelectedId(null)}
                     >
-                      Close
+                      <IoMdClose />
                     </motion.button>
                   </React.Fragment>
                 ))}
