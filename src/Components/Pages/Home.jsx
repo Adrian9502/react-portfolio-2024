@@ -9,13 +9,13 @@ import Footer from "../Footer.jsx";
 import Contact from "../Home/Contact.jsx";
 export default function Home() {
   return (
-    <main className="relative sm:px-5 md:px-14 lg:px-16 xl:px-52">
+    <main className="overflow-x-hidden sm:px-5 md:px-14 lg:px-16 xl:px-52">
       <Header />
       <Introduction />
       <About />
       <Skills />
-      {/* <Projects />
-      <Certification />
+      {/* <Projects /> */}
+      {/* <Certification />
       <Contact />
       <Footer /> */}
     </main>

@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky rounded-md shadow-sm shadow-custom-cyan sm:shadow-none top-0 left-0 right-0 z-20 p-3 flex items-center justify-between">
+    <header className="sticky shadow-sm shadow-custom-cyan sm:shadow-none top-0 left-0 right-0 z-20 p-3 flex items-center justify-between">
       {/* Logo Section */}
       <section>
         <Link to="/">

@@ -24,7 +24,7 @@ export default function Skills() {
   return (
     <section
       id="Skills"
-      className="p-2 flex flex-col lg:flex-row items-center justify-around sm:p-8 text-slate-300"
+      className="p-2 flex flex-col lg:flex-row items-center justify-around sm:p-14 mb-32 text-slate-300"
     >
       {/* Title section */}
       <div className="flex-1 flex flex-col items-center text-wrap p-5 sm:p-1 justify-center gap-5 font-semibold text-slate-300 relative">
