@@ -1,13 +1,16 @@
 import PropTypes from "prop-types";
-import skillsData from "../Skills/skillsData";
+import { skillsData, secondarySkills } from "../Skills/skillsData";
+
 function SkillsContainer({ svg, text }) {
   return (
-    <div className="flex hover:-translate-y-1 transition-all text-slate-400 hover:text-custom-cyan flex-col items-center gap-1">
+    <div className="flex flex-col items-center gap-2 hover:-translate-y-2 transition-all duration-300 text-slate-300 hover:text-custom-cyan">
       <div
         dangerouslySetInnerHTML={{ __html: svg }}
-        className="w-8 h-8 lg:w-11 lg:h-11"
-      />{" "}
-      <span className="text-xs">{text}</span>
+        className="w-11 h-11 md:w-12 md:h-12 lg:w-13 lg:h-13 shadow-sm shadow-custom-cyan/80 bg-slate-800 rounded-md p-2 transition-all duration-300 hover:scale-105"
+      />
+      <span className="text-xs lg:text-sm transition-all duration-300">
+        {text}
+      </span>
     </div>
   );
 }
@@ -16,37 +19,65 @@ SkillsContainer.propTypes = {
   svg: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };
+
 export default function Skills() {
   return (
-    <section id="Skills" className="p-14 text-slate-300">
-      <div className="h-1.5 bg-custom-cyan w-full rounded-lg mb-8"></div>
-      <div className="flex flex-col lg:flex-row  gap-3 lg:gap-10 ">
-        <div className="text-xl sm:text-2xl lg:text-3xl relative font-medium text-start mb-6">
-          These are my skills that I&apos;ve learned throughout my journey in
-          web development.
+    <section
+      id="Skills"
+      className="p-2 flex flex-col lg:flex-row items-center justify-around sm:p-8 text-slate-300"
+    >
+      {/* Title section */}
+      <div className="flex-1 flex flex-col items-center text-wrap p-5 sm:p-1 justify-center gap-5 font-semibold text-slate-300 relative">
+        {/* Cyan divider */}
+        <div className="h-1.5 md:h-2 rounded-lg bg-custom-cyan w-full"></div>
+        {/* Title */}
+        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-6 lg:mb-10 lg:tracking-wide">
+          These are the skills I&apos;ve gained in my web development journey.
+        </div>
+        {/* Doodles */}
+        <div>
+          {/* line curve */}
           <img
             src="/Home/doodle1.png"
-            className="absolute md:top-16 xl:left-2/4 right-0 -top-4 lg:top-32 lg:left-2/4 rotate-12 bottom-16 w-20"
+            className="absolute opacity-40 md:right-24  right-1/4 lg:top-52 lg:left-2/4 rotate-12 bottom-7 w-20 lg:w-32 xl:top-48"
             alt="doodle1"
           />
+          {/* keyboard */}
           <img
             src="/keyboard.png"
-            className="absolute  xl:left-3/4 xl:top-24 right-0 -bottom-4 md:-bottom-12 md:right-32 lg:right-4 lg:top-20 -rotate-45 md:w-16 w-24"
+            className="absolute opacity-40 xl:left-3/4 xl:top-40 right-0 bottom-10 md:top-16 md:right-3  lg:top-24 -rotate-45 md:w-20 lg:w-32 w-24"
             alt="keyboard"
           />
+          {/* laptop */}
           <img
             src="/lappy.png"
-            className="absolute hidden sm:block md:block lg:block xl:left-0 xl:top-24 left-[55%] bottom-2 md:left-2/4 md:top-16 lg:top-32 top-20 lg:left-10 rotate-12 w-14 lg:w-20"
+            className="absolute opacity-40 hidden sm:block md:block lg:block xl:left-1/4 left-[45%] bottom-2 md:-bottom-2 lg:top-48  lg:left-10 rotate-12 w-14 lg:w-20"
             alt="laptop"
           />
           <img
             src="/stars.png"
-            className="absolute xl:left-1/4 xl:top-24 left-[35%] lg:top-32 lg:left-40 md:-bottom-12 md:left-10 -bottom-10 w-10 lg:w-14"
+            className="absolute opacity-40 left-1/4 lg:top-48 lg:left-40 md:-bottom-2 xl:left-10 bottom-2 w-10 lg:w-14"
             alt="stars"
           />
         </div>
-        <div className="flex flex-wrap gap-6 p-5 ">
+      </div>
+
+      {/* Skills section */}
+      <div className="flex-1 flex flex-col gap-8 p-2">
+        {/* Primary Skills */}
+        <div className="flex gap-5 flex-wrap items-center justify-center">
           {skillsData.map((skill, index) => (
+            <SkillsContainer key={index} svg={skill.svg} text={skill.text} />
+          ))}
+        </div>
+
+        {/* Secondary Skills */}
+        <div className="text-sm sm:text-base text-center">
+          I also learned the basics of these languages through school and
+          personal projects.
+        </div>
+        <div className="flex gap-5 flex-wrap items-center justify-center">
+          {secondarySkills.map((skill, index) => (
             <SkillsContainer key={index} svg={skill.svg} text={skill.text} />
           ))}
         </div>
