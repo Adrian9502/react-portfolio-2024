@@ -1,6 +1,3 @@
-import { FaFacebook, FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
-
 export default function Footer() {
   const socialLinks = [
     {
@@ -42,7 +39,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="p-3 sm:p-8 border-t border-custom-cyan text-slate-300 flex flex-col lg:flex-row items-center justify-between gap-8">
+    <footer className="p-3 sm:p-8 mb-12 border-t border-custom-cyan text-slate-300 flex flex-col lg:flex-row items-center justify-between gap-8">
       {/* Left section*/}
       <div className="flex flex-col justify-center items-center text-center p-1.5">
         <div className="text-slate-300 p-1 flex justify-center gap-2 mb-3">

@@ -32,7 +32,7 @@ export default function Header() {
       <section
         className={`${
           menuOpen ? "flex flex-wrap shadow-md  shadow-custom-cyan" : "hidden"
-        } sm:flex header-menu justify-center  items-end sm:flex-row sm:items-center absolute sm:static top-16 rounded-md right-0 text-sm text-slate-300 z-10`}
+        } sm:flex bg-[#000319] sm:bg-transparent justify-center items-end sm:flex-row sm:items-center absolute sm:static top-16 right-0 left-0 text-sm text-slate-300 z-10`}
       >
         <a
           href="#Introduction"
