@@ -6,7 +6,7 @@
 }
 header,
 .header-menu {
-  background: rgb(0, 10, 31);
+  background: #000319;
 }
 .nav-item::after {
   content: "";

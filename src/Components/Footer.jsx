@@ -4,55 +4,46 @@ import { SiGmail } from "react-icons/si";
 export default function Footer() {
   const socialLinks = [
     {
-      Icon: FaFacebook,
+      // Facebook
+      image:
+        "https://cdn-icons-png.freepik.com/256/5968/5968764.png?semt=ais_hybrid",
       link: "https://www.facebook.com/profile.php?id=100082782967903",
       label: "Facebook Profile",
+      name: "John Adrian Bonto",
       text: "Facebook",
     },
     {
-      Icon: SiGmail,
+      // Email
+      image:
+        "https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-256.png",
       link: "mailto:bontojohnadrian@gmail.com",
       label: "Send Email",
+      name: "bontojohnadrian@gmail.com",
       text: "Gmail",
     },
     {
-      Icon: FaGithub,
+      // github
+      image:
+        "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-256.png",
       link: "https://github.com/Adrian9502",
       label: "GitHub Profile",
+      name: "Adrian9502",
       text: "GitHub",
     },
+    // linkedin
     {
-      Icon: FaLinkedinIn,
+      image:
+        "https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-256.png",
       link: "https://www.linkedin.com/in/john-adrian-bonto-a65704283/",
       label: "LinkedIn Profile",
+      name: "John Adrian Bonto",
       text: "LinkedIn",
     },
   ];
 
   return (
-    <footer className="p-8 border-t border-custom-cyan text-slate-300 flex flex-col lg:flex-row items-center justify-between gap-8">
+    <footer className="p-3 sm:p-8 border-t border-custom-cyan text-slate-300 flex flex-col lg:flex-row items-center justify-between gap-8">
       {/* Left section*/}
-      <div className="flex flex-col items-start">
-        <div className="mb-3 text-lg">My Socials</div>
-        <div className="flex flex-wrap items-start justify-start gap-3">
-          {socialLinks.map((social, index) => (
-            <a
-              key={index}
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.label}
-            >
-              <div className="p-2 flex border border-slate-500 rounded-md items-center gap-2 hover:text-custom-cyan hover:bg-slate-950/80 transition-all duration-300">
-                <social.Icon size={20} />
-                <span className="text-xs">{social.text}</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* Middle Section */}
       <div className="flex flex-col justify-center items-center text-center p-1.5">
         <div className="text-slate-300 p-1 flex justify-center gap-2 mb-3">
           <span>Made with </span>
@@ -62,12 +53,8 @@ export default function Footer() {
             <img src="/Tailwind CSS.png" className="w-6" alt="Tailwind CSS" />
           </div>
         </div>
-        <p className="text-sm text-slate-500 mt-2">
-          Made by{" "}
-          <span className="hover:text-custom-cyan cursor-default transition-colors">
-            John Adrian Bonto
-          </span>
-          . All rights reserved.
+        <p className="text-xs sm:text-sm text-slate-500 mt-2">
+          Made by John Adrian Bonto. All rights reserved.
           <br />
           {/* <span className="text-xs">
             This design was inspired by{" "}
@@ -83,38 +70,35 @@ export default function Footer() {
         </p>
       </div>
 
-      {/* Right Section */}
-      <div className="flex flex-col items-end">
-        <div className="text-lg text-slate-300 mb-3">Quick Links</div>
-        <div className="flex flex-wrap gap-4 text-slate-400">
-          <a
-            href="#Introduction"
-            className="hover:text-custom-cyan transition-colors"
-          >
-            Home
-          </a>
-          <a href="#about" className="hover:text-custom-cyan transition-colors">
-            About
-          </a>
-          <a
-            href="#certification"
-            className="hover:text-custom-cyan transition-colors"
-          >
-            Certification
-          </a>
-          <a
-            href="#projects"
-            className="hover:text-custom-cyan transition-colors"
-          >
-            Projects
-          </a>
-          <a
-            href="#skills"
-            className="hover:text-custom-cyan transition-colors"
-          >
-            Skills
-          </a>
+      {/* Middle Section */}
+      <div className="flex flex-col items-start">
+        <div className="mb-3 text-lg">My Socials</div>
+        <div className="flex flex-wrap items-start justify-start gap-3">
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+            >
+              <div className="p-2 flex rounded-md items-center gap-2 bg-slate-900 shadow-lg duration-300">
+                <img src={social.image} alt={social.label} className="w-6" />
+                <span className="text-xs">{social.name}</span>
+              </div>
+            </a>
+          ))}
         </div>
+      </div>
+
+      {/* Right Section */}
+      <div className="flex flex-col items-center">
+        <a
+          href="#Introduction"
+          className="text-sm border border-custom-cyan p-3 rounded-md text-slate-300 mb-3"
+        >
+          Back to top
+        </a>
       </div>
     </footer>
   );

@@ -2,7 +2,7 @@ import Titles from "../Titles";
 import CodeDisplay from "../About/CodeDisplay";
 export default function About() {
   return (
-    <div id="About" className="flex relative flex-col sm:p-14">
+    <div id="About" className="flex relative flex-col sm:p-14 mb-20">
       <Titles title={"Discover more about my passions and interests."} />
       <div className="flex flex-col 2xl:flex-row pointer-events-none items-center justify-around mt-10">
         <div className="p-10 relative text-center text-base sm:text-base md:text-lg lg:text-xl text-slate-300">

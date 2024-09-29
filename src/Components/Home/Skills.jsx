@@ -24,7 +24,7 @@ export default function Skills() {
   return (
     <section
       id="Skills"
-      className="p-2 overflow-x-hidden flex flex-col lg:flex-row items-center justify-around sm:p-14 mb-32 text-slate-300"
+      className="p-2 overflow-hidden flex flex-col lg:flex-row items-center justify-around sm:p-14 mb-32 text-slate-300"
     >
       {/* Title section */}
       <div className="flex-1 flex flex-col items-center text-wrap p-5 sm:p-1 justify-center gap-5 font-semibold text-slate-300 relative">
@@ -39,19 +39,19 @@ export default function Skills() {
           {/* line curve */}
           <img
             src="/Home/doodle1.png"
-            className="absolute opacity-40 md:right-24  right-1/4 lg:top-52 lg:left-2/4 rotate-12 bottom-7 w-20 lg:w-32 xl:top-48"
+            className="absolute opacity-40 md:right-24  right-1/4 lg:top-52 lg:left-2/4 rotate-12 bottom-7 w-20 lg:w-32 xl:top-40"
             alt="doodle1"
           />
           {/* keyboard */}
           <img
             src="/keyboard.png"
-            className="absolute opacity-40 xl:left-3/4 xl:top-40 right-0 bottom-10 md:top-16 md:right-3  lg:top-24 -rotate-45 md:w-20 lg:w-32 w-24"
+            className="absolute opacity-40 xl:left-3/4 xl:top-32 right-0 bottom-10 md:top-16 md:right-3  lg:top-24 -rotate-45 md:w-20 lg:w-32 w-24"
             alt="keyboard"
           />
           {/* laptop */}
           <img
             src="/lappy.png"
-            className="absolute opacity-40 hidden sm:block md:block lg:block xl:left-1/4 left-[45%] bottom-2 md:-bottom-2 lg:top-48  lg:left-10 rotate-12 w-14 lg:w-20"
+            className="absolute opacity-40 hidden sm:block md:block lg:block xl:left-1/4 left-[45%] bottom-2 md:-bottom-2 lg:top-44 lg:left-10 rotate-12 w-14 lg:w-20"
             alt="laptop"
           />
           <img
@@ -73,7 +73,7 @@ export default function Skills() {
 
         {/* Secondary Skills */}
         <div className="text-sm sm:text-base text-center">
-          I also learned the basics of these languages through school and
+          I also learned the basics of these technologies through school and
           personal projects.
         </div>
         <div className="flex gap-5 flex-wrap items-center justify-center">
