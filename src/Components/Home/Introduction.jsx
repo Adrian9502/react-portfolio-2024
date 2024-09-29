@@ -131,42 +131,45 @@ export default function Introduction() {
   ];
 
   return (
-    <section
-      id="Introduction"
-      className="w-full relative border-cyan-300 flex pt-32 justify-center gap-5"
-    >
+    // main container
+    <section id="Introduction" className="relative flex pt-32 justify-center">
+      {/* container for text introduction */}
       <motion.div
-        className="w-full flex text-center flex-col items-center space-y-3 justify-center text-slate-300"
+        className="flex text-center flex-col items-center space-y-3 justify-center text-slate-300"
         initial="hidden"
         animate="visible"
       >
+        {/* hello! text */}
         <motion.div
-          className="text-base rounded-lg p-2 md:text-lg lg:text-xl"
+          className="text-base md:text-lg lg:text-xl"
           variants={itemVariants}
         >
           Hello! I&apos;m John Adrian.
         </motion.div>
-
+        {/* A passionate... text */}
         <motion.div
-          className="text-xl md:text-2xl lg:text-2xl  flex flex-col items-center lg:items-stretch"
+          className="text-lg sm:text-xl md:text-2xl lg:text-2xl flex flex-col items-center lg:items-stretch"
           variants={itemVariants}
         >
           A passionate
+          {/* Web Developer text */}
           <motion.span
-            className="text-custom-cyan lg:py-3 text-5xl lg:text-[85px] md:text-6xl lg:font-semibold font-bold"
+            className="text-custom-cyan lg:py-3 text-4xl sm:text-6xl md:text-7xl lg:text-[85px] font-bold"
             variants={itemVariants}
           >
             Web Developer
           </motion.span>
           specializing in
+          {/* Front end developer text */}
           <motion.div
-            className="text-custom-cyan text-wrap mb-3 lg:mb-0 lg:py-3 text-5xl md:text-6xl lg:text-[85px] lg:font-semibold font-bold"
+            className="text-custom-cyan py-2 lg:py-3 text-4xl sm:text-6xl md:text-7xl lg:text-[85px] font-bold"
             variants={itemVariants}
           >
             Front-End Development.
           </motion.div>
+          {/* Creating engaging... text */}
           <motion.div
-            className="text-sm md:text-base lg:text-xl text-center tracking-normal"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-center tracking-normal"
             variants={itemVariants}
           >
             Creating engaging, responsive, and user-friendly websites with
