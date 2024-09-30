@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import Titles from "../Titles";
 import certificate1 from "/certificates/assets/CareerEssentialsInSoftwareDevelopmentByMicrosoftAndLinkedIn.png";
 import certificate2 from "/certificates/assets/IntroductionToCareerSkillsInSoftwareDevelopment.png";
@@ -7,11 +7,14 @@ import certificate3 from "/certificates/assets/ProgrammingFoundationsBeyondTheFu
 import certificate4 from "/certificates/assets/ProgrammingFoundationsFundamentals.png";
 import { IoMdDownload } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import "../Projects/projects.css";
 
 export default function Certifications() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); // Detect if in view
+
   const [selectedId, setSelectedId] = useState(null);
 
-  // array of objects containing the certificates information
   const certificates = [
     {
       id: "1",
@@ -48,18 +51,29 @@ export default function Certifications() {
   ];
 
   return (
-    <section className="p-2 my-20 sm:p-14" id="Certification">
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.4, delay: 0.5 }}
+      animation
+      className="p-2 my-20 sm:p-14"
+      id="Certification"
+    >
       <Titles title="I completed online courses and earned certificates." />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
-        {certificates.map((certificate) => {
+        {certificates.map((certificate, index) => {
           const randomNum = Math.floor(Math.random() * 6) + 1;
 
           return (
             <motion.div
               key={certificate.id}
-              layoutId={certificate.id}
-              className="transition-all p-2 rounded-md overflow-hidden flex flex-col gap-3 cursor-pointer"
+              className="p-2 rounded-md overflow-hidden flex flex-col gap-3 cursor-pointer"
               onClick={() => setSelectedId(certificate.id)}
+              ref={ref}
+              initial={{ opacity: 0, y: 20 }} // Initial state for animation
+              animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate when in view
+              transition={{ duration: 0.4, delay: index * 0.5 }} // Delay each animation
             >
               <div className="border rounded-md p-2 flex hover:-translate-y-2 transition-all">
                 <div
@@ -156,6 +170,6 @@ export default function Certifications() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </motion.section>
   );
 }

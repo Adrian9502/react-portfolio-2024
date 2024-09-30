@@ -45,13 +45,28 @@ export default function Footer() {
         <div className="text-slate-300 p-1 flex justify-center gap-2 mb-3">
           <span>Made with </span>
           <div className="flex gap-2">
-            <img src="/Vite.js.png" className="w-6" alt="Vite.js" />
-            <img src="/React.png" className="w-6" alt="React" />
-            <img src="/Tailwind CSS.png" className="w-6" alt="Tailwind CSS" />
+            <img
+              src="/Vite.js.png"
+              className="w-6"
+              alt="Vite.js"
+              title="Vite.js"
+            />
+            <img
+              src="/React.png"
+              className="w-6"
+              alt="ReactJS"
+              title="ReactJS"
+            />
+            <img
+              src="/Tailwind CSS.png"
+              className="w-6"
+              alt="Tailwind CSS"
+              title="Tailwind CSS"
+            />
           </div>
         </div>
         <p className="text-xs sm:text-sm text-slate-500 mt-2">
-          Made by John Adrian Bonto. All rights reserved.
+          Made by John Adrian Bonto.
           <br />
           {/* <span className="text-xs">
             This design was inspired by{" "}

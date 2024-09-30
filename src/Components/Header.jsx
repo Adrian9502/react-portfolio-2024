@@ -35,7 +35,7 @@ export default function Header() {
         } sm:flex bg-[#000319] sm:bg-transparent justify-center items-end sm:flex-row sm:items-center absolute sm:static top-16 right-0 left-0 text-sm text-slate-300 z-10`}
       >
         <a
-          href="#Introduction"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="nav-item hover:text-custom-cyan sm:text-base"
         >
           Home

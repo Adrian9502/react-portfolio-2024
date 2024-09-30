@@ -145,7 +145,10 @@ export default function Introduction() {
 
   return (
     // main container
-    <section id="Introduction" className="relative flex pt-32 justify-center">
+    <section
+      id="Introduction"
+      className="relative flex pt-32 mb-20 justify-center"
+    >
       {/* container for text introduction */}
       <motion.div
         className="flex text-center flex-col items-center space-y-3 justify-center text-slate-300"

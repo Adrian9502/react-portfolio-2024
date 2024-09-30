@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
+import { useRef, React } from "react";
 import { skillsData, secondarySkills } from "../Skills/skillsData";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 
 function SkillsContainer({ svg, text }) {
   return (
@@ -21,34 +24,56 @@ SkillsContainer.propTypes = {
 };
 
 export default function Skills() {
+  // Create refs for in-view detection
+  const titleRef = useRef(null);
+  const primarySkillsRef = useRef(null);
+  const secondarySkillsRef = useRef(null);
+
+  const isTitleInView = useInView(titleRef, { once: true });
+  const isPrimarySkillsInView = useInView(primarySkillsRef, { once: true });
+  const isSecondarySkillsInView = useInView(secondarySkillsRef, { once: true });
+
+  // Define the animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 }, // Start slightly below and transparent
+    visible: { opacity: 1, y: 0 }, // Animate to original position
+  };
+
   return (
     <section
       id="Skills"
       className="p-2 overflow-hidden flex flex-col lg:flex-row items-center justify-around sm:p-14 mb-32 text-slate-300"
     >
       {/* Title section */}
-      <div className="flex-1 flex flex-col items-center text-wrap p-5 sm:p-1 justify-center gap-5 font-semibold text-slate-300 relative">
+      <div
+        ref={titleRef}
+        className="flex-1 flex flex-col items-center text-wrap p-5 sm:p-1 justify-center gap-5 font-semibold text-slate-300 relative"
+      >
         {/* Cyan divider */}
         <div className="h-1.5 md:h-2 rounded-lg bg-custom-cyan w-full"></div>
-        {/* Title */}
-        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-6 lg:mb-10 lg:tracking-wide">
+        {/* Title with animation */}
+        <motion.div
+          initial="hidden"
+          animate={isTitleInView ? "visible" : "hidden"}
+          variants={fadeInUp}
+          transition={{ duration: 0.8, delay: 0.2 }} // Delay for the title
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-6 lg:mb-10 lg:tracking-wide"
+        >
           These are the skills I&apos;ve gained in my web development journey.
-        </div>
+        </motion.div>
+
         {/* Doodles */}
         <div>
-          {/* line curve */}
           <img
             src="/Home/doodle1.png"
-            className="absolute opacity-40 md:right-24  right-1/4 lg:top-52 lg:left-2/4 rotate-12 bottom-7 w-20 lg:w-32 xl:top-40"
+            className="absolute opacity-40 md:right-24 right-1/4 lg:top-52 lg:left-2/4 rotate-12 bottom-7 w-20 lg:w-32 xl:top-40"
             alt="doodle1"
           />
-          {/* keyboard */}
           <img
             src="/keyboard.png"
             className="absolute opacity-40 xl:left-3/4 xl:top-32 right-0 bottom-10 md:top-16 md:right-3  lg:top-24 -rotate-45 md:w-20 lg:w-32 w-24"
             alt="keyboard"
           />
-          {/* laptop */}
           <img
             src="/lappy.png"
             className="absolute opacity-40 hidden sm:block md:block lg:block xl:left-1/4 left-[45%] bottom-2 md:-bottom-2 lg:top-44 lg:left-10 rotate-12 w-14 lg:w-20"
@@ -63,23 +88,40 @@ export default function Skills() {
       </div>
 
       {/* Skills section */}
-      <div className="flex-1 flex flex-col gap-8 p-2">
-        {/* Primary Skills */}
-        <div className="flex gap-5 flex-wrap items-center justify-center">
+      <div ref={primarySkillsRef} className="flex-1 flex flex-col gap-8 p-2">
+        {/* Primary Skills with animation */}
+        <motion.div
+          initial="hidden"
+          animate={isPrimarySkillsInView ? "visible" : "hidden"}
+          variants={fadeInUp}
+          transition={{ duration: 0.8, delay: 0.4 }} // Delay for primary skills
+          className="flex gap-5 flex-wrap items-center justify-center"
+        >
           {skillsData.map((skill, index) => (
             <SkillsContainer key={index} svg={skill.svg} text={skill.text} />
           ))}
-        </div>
+        </motion.div>
 
         {/* Secondary Skills */}
         <div className="text-sm sm:text-base text-center">
           I also learned the basics of these technologies through school and
           personal projects.
         </div>
-        <div className="flex gap-5 flex-wrap items-center justify-center">
-          {secondarySkills.map((skill, index) => (
-            <SkillsContainer key={index} svg={skill.svg} text={skill.text} />
-          ))}
+        <div
+          ref={secondarySkillsRef}
+          className="flex gap-5 flex-wrap items-center justify-center"
+        >
+          <motion.div
+            initial="hidden"
+            animate={isSecondarySkillsInView ? "visible" : "hidden"}
+            variants={fadeInUp}
+            transition={{ duration: 0.8, delay: 0.6 }} // Delay for secondary skills
+            className="flex gap-5 flex-wrap items-center justify-center"
+          >
+            {secondarySkills.map((skill, index) => (
+              <SkillsContainer key={index} svg={skill.svg} text={skill.text} />
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

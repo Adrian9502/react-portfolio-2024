@@ -1,8 +1,31 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function Contact() {
+  // Reference for the section
+  const ref = useRef(null);
+  // Check if the section is in view
+  const isInView = useInView(ref, { once: true });
+
+  // Define the animation variants
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const buttonVariants = {
+    hover: { scale: 1.05 },
+  };
+
   return (
-    <section
+    <motion.section
+      ref={ref}
       id="Contact"
       className="relative my-10 sm:my-16 lg:my-20 p-5 sm:p-10 overflow-x-hidden lg:p-14 gap-8 sm:gap-10 flex flex-col items-center justify-center text-slate-300"
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={sectionVariants}
+      transition={{ duration: 2 }}
     >
       {/* doodle14 */}
       <img
@@ -27,10 +50,14 @@ export default function Contact() {
         <div>Feel free to connect!</div>
       </div>
       {/* say hello button */}
-      <div className="flex flex-col lg:flex-row items-center gap-3 lg:justify-center lg:gap-10 w-full">
+      <motion.div
+        className="flex flex-col lg:flex-row items-center gap-3 lg:justify-center lg:gap-10 w-full"
+        whileHover="hover"
+        variants={buttonVariants}
+      >
         <a
           href="mailto:bontojohnadrian@gmail.com"
-          className="py-2 flex-nowrap px-2  border-2 hover:scale-105 hover:text-custom-cyan border-custom-cyan hover:bg-slate-950 transition-all duration-300 rounded-md"
+          className="py-2 flex-nowrap px-2 border-2 border-custom-cyan hover:bg-slate-950 transition-all duration-300 rounded-md"
         >
           <div className="flex items-center justify-center gap-1 px-2">
             <span>Say Hello!</span>
@@ -41,7 +68,7 @@ export default function Contact() {
             />
           </div>
         </a>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
