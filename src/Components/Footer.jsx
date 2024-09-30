@@ -65,6 +65,9 @@ export default function Footer() {
             and fully coded by me.
           </span> */}
         </p>
+        <span className="text-xs sm:text-sm text-slate-500 mt-2">
+          Copyright © {new Date().getFullYear()} - All rights reserved
+        </span>
       </div>
 
       {/* Middle Section */}
@@ -89,13 +92,11 @@ export default function Footer() {
       </div>
 
       {/* Right Section */}
-      <div className="flex flex-col items-center">
-        <a
-          href="#Introduction"
-          className="text-sm border border-custom-cyan p-3 rounded-md text-slate-300 mb-3"
-        >
-          Back to top
-        </a>
+      <div
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="flex cursor-pointer flex-col items-center text-sm border border-custom-cyan p-3 rounded-md text-slate-300 mb-3"
+      >
+        Back to top
       </div>
     </footer>
   );
