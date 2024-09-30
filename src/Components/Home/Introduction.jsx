@@ -7,14 +7,6 @@ import { useState } from "react";
 export default function Introduction() {
   // state for hovering in bicycle
   const [imageSrc, setImageSrc] = useState("/biking-static.png");
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1, ease: "easeInOut" },
-    },
-  };
 
   // Animation for doodle images
   const doodleVariants = {
@@ -129,6 +121,27 @@ export default function Introduction() {
       alt: "doodle7",
     },
   ];
+  // Animation for text
+  // Variants for the animation
+  const fadeFromCenter = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
+  const fadeFromLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeFromRight = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeFromBottom = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     // main container
@@ -139,46 +152,69 @@ export default function Introduction() {
         initial="hidden"
         animate="visible"
       >
-        {/* hello! text */}
+        {/* Hello! I'm John Adrian. */}
         <motion.div
           className="text-base md:text-lg lg:text-xl"
-          variants={itemVariants}
+          variants={fadeFromCenter}
+          transition={{ duration: 2, delay: 0 }} // no delay
         >
           Hello! I&apos;m John Adrian.
         </motion.div>
-        {/* A passionate... text */}
+
+        {/* A passionate */}
         <motion.div
           className="text-lg sm:text-xl md:text-2xl lg:text-2xl flex flex-col items-center lg:items-stretch"
-          variants={itemVariants}
+          variants={fadeFromCenter}
+          transition={{ duration: 2, delay: 0.6 }} // .3sec delay
         >
           A passionate
-          {/* Web Developer text */}
-          <motion.span
-            className="text-custom-cyan lg:py-3 text-4xl sm:text-6xl md:text-7xl lg:text-[85px] font-bold"
-            variants={itemVariants}
-          >
-            Web Developer
-          </motion.span>
+        </motion.div>
+
+        {/* Web Developer */}
+        <motion.div
+          className="text-custom-cyan lg:py-3 text-4xl sm:text-6xl md:text-7xl lg:text-[85px] font-bold"
+          variants={fadeFromLeft}
+          transition={{ duration: 2, delay: 0.9 }} // .6sec delay
+        >
+          Web Developer
+        </motion.div>
+
+        {/* specializing in */}
+        <motion.div
+          className="text-lg sm:text-xl md:text-2xl lg:text-2xl flex flex-col items-center lg:items-stretch"
+          variants={fadeFromCenter}
+          transition={{ duration: 2, delay: 1.2 }} // .9sec delay
+        >
           specializing in
-          {/* Front end developer text */}
-          <motion.div
-            className="text-custom-cyan py-2 lg:py-3 text-4xl sm:text-6xl md:text-7xl lg:text-[85px] font-bold"
-            variants={itemVariants}
-          >
-            Front-End Development.
-          </motion.div>
-          {/* Creating engaging... text */}
-          <motion.div
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-center tracking-normal"
-            variants={itemVariants}
-          >
-            Creating engaging, responsive, and user-friendly websites with
-            modern technologies.
-          </motion.div>
+        </motion.div>
+
+        {/* Front-End Development */}
+        <motion.div
+          className="text-custom-cyan py-2 lg:py-3 text-4xl sm:text-6xl md:text-7xl lg:text-[85px] font-bold"
+          variants={fadeFromRight}
+          transition={{ duration: 2, delay: 1.3 }} // 1.2sec delay
+        >
+          Front-End Development.
+        </motion.div>
+
+        {/* Creating engaging... */}
+        <motion.div
+          className="text-sm sm:text-base md:text-lg lg:text-xl text-center tracking-normal"
+          variants={fadeFromBottom}
+          transition={{ duration: 2, delay: 1.8 }}
+        >
+          Creating engaging, responsive, and user-friendly websites with modern
+          technologies.
         </motion.div>
 
         {/* Social icons */}
-        <div className="flex items-center justify-center gap-3">
+        <motion.div
+          className="flex items-center justify-center gap-3"
+          initial="hidden"
+          animate="visible"
+          variants={fadeFromBottom}
+          transition={{ duration: 2, delay: 2.1 }}
+        >
           {socialLinks.map((social, index) => (
             <SocialIcons
               key={index}
@@ -187,7 +223,7 @@ export default function Introduction() {
               label={social.label}
             />
           ))}
-        </div>
+        </motion.div>
 
         {/* doodle and Explore button */}
         <div className="flex flex-col items-center justify-center w-full lg:gap-40 ">
@@ -204,7 +240,14 @@ export default function Introduction() {
             />
           ))}
 
-          <a href="#About" className="mt-20">
+          <motion.a
+            initial="hidden"
+            animate="visible"
+            variants={fadeFromCenter}
+            transition={{ duration: 1, delay: 1.6 }}
+            href="#About"
+            className="mt-20"
+          >
             <span
               onMouseEnter={() => {
                 setImageSrc("/biking gif.gif"); // Set GIF when hovered
@@ -221,7 +264,7 @@ export default function Introduction() {
                 alt="biking gif"
               />
             </span>
-          </a>
+          </motion.a>
           <iframe
             className="w-20"
             src="https://lottie.host/embed/7bf3af0d-e1bb-4e60-b2db-ca4493a39c41/9ZvnnjxxxB.json"
