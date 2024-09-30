@@ -44,7 +44,7 @@ export default function Footer() {
       <div className="flex flex-col justify-center items-center text-center p-1.5">
         <div className="text-slate-300 p-1 flex justify-center gap-2 mb-3">
           <span>Made with </span>
-          <div className="flex gap-2">
+          <div className="flex gap-2 pointer-events-none">
             <img
               src="/Vite.js.png"
               className="w-6"
@@ -68,7 +68,7 @@ export default function Footer() {
         <p className="text-xs sm:text-sm text-slate-500 mt-2">
           Made by John Adrian Bonto.
           <br />
-          {/* <span className="text-xs">
+          <span className="text-xs">
             This design was inspired by{" "}
             <a
               href="https://braydentw.io"
@@ -78,7 +78,7 @@ export default function Footer() {
               Brayden TW
             </a>{" "}
             and fully coded by me.
-          </span> */}
+          </span>
         </p>
         <span className="text-xs sm:text-sm text-slate-500 mt-2">
           Copyright © {new Date().getFullYear()} - All rights reserved

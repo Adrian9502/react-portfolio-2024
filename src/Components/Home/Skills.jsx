@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useRef, React } from "react";
+import { useRef } from "react";
 import { skillsData, secondarySkills } from "../Skills/skillsData";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
