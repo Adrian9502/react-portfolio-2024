@@ -58,7 +58,7 @@ const projectsData = [
   },
   // Datkilab
   {
-    img: "https://private-user-images.githubusercontent.com/140230177/390236002-9a41e991-af43-48e7-a046-7df5bc8dca3b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzM5NzE4NzIsIm5iZiI6MTczMzk3MTU3MiwicGF0aCI6Ii8xNDAyMzAxNzcvMzkwMjM2MDAyLTlhNDFlOTkxLWFmNDMtNDhlNy1hMDQ2LTdkZjViYzhkY2EzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIxMlQwMjQ2MTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02NjljYjFlZTRmYTViYWIxNjk1YTUyZmVjYTBjMTA3NmUyMDY4ODMwNTIzOGFkMGIyMTNjNWFiYzI0OTQ1NzcyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.MpcD30t_K_Gc4QVeJ1AdhC-d6oOPBKMshSFqHYRglLM",
+    img: "https://github.com/Adrian9502/react-datkilab/blob/main/image_2024-12-12_110522495.png?raw=true",
     title: "Datkilab - Reverse your words",
     description:
       "Flip your words and mess with your friends! Watch your text get reversed. It's a fun way to confuse your group chats and have a laugh!",
