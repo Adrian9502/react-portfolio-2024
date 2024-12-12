@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useRef } from "react";
-import { skillsData, secondarySkills } from "../Skills/skillsData";
+import { skillsData } from "../Skills/skillsData";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 
@@ -27,11 +27,9 @@ export default function Skills() {
   // Create refs for in-view detection
   const titleRef = useRef(null);
   const primarySkillsRef = useRef(null);
-  const secondarySkillsRef = useRef(null);
 
   const isTitleInView = useInView(titleRef, { once: true });
   const isPrimarySkillsInView = useInView(primarySkillsRef, { once: true });
-  const isSecondarySkillsInView = useInView(secondarySkillsRef, { once: true });
 
   // Define the animation variants
   const fadeInUp = {
@@ -66,17 +64,17 @@ export default function Skills() {
         <div>
           <img
             src="/Home/doodle1.png"
-            className="absolute opacity-40 md:right-24 right-1/4 lg:top-52 lg:left-2/4 rotate-12 bottom-7 w-20 lg:w-32 xl:top-40"
+            className="absolute opacity-40 md:right-24 right-1/4 lg:top-36 lg:left-2/4 rotate-12 bottom-7 w-20 lg:w-32 xl:top-40"
             alt="doodle1"
           />
           <img
             src="/keyboard.png"
-            className="absolute opacity-40 xl:left-3/4 xl:top-32 right-0 bottom-10 md:top-16 md:right-3  lg:top-24 -rotate-45 md:w-20 lg:w-32 w-24"
+            className="absolute opacity-40 xl:left-3/4 xl:top-20 right-0 bottom-10 md:top-16 md:right-3 lg:top-32 -rotate-45 md:w-20 lg:w-32 w-24"
             alt="keyboard"
           />
           <img
             src="/lappy.png"
-            className="absolute opacity-40 hidden sm:block md:block lg:block xl:left-1/4 left-[45%] bottom-2 md:-bottom-2 lg:top-44 lg:left-10 rotate-12 w-14 lg:w-20"
+            className="absolute opacity-40 hidden sm:block md:block lg:block xl:left-1/4 left-[45%] bottom-2 md:-bottom-2 lg:top-36 lg:left-10 rotate-12 w-14 lg:w-20"
             alt="laptop"
           />
           <img
@@ -101,28 +99,6 @@ export default function Skills() {
             <SkillsContainer key={index} svg={skill.svg} text={skill.text} />
           ))}
         </motion.div>
-
-        {/* Secondary Skills */}
-        <div className="text-sm sm:text-base text-center">
-          I also learned the basics of these technologies through school and
-          personal projects.
-        </div>
-        <div
-          ref={secondarySkillsRef}
-          className="flex gap-5 flex-wrap items-center justify-center"
-        >
-          <motion.div
-            initial="hidden"
-            animate={isSecondarySkillsInView ? "visible" : "hidden"}
-            variants={fadeInUp}
-            transition={{ duration: 0.8, delay: 0.6 }} // Delay for secondary skills
-            className="flex gap-5 flex-wrap items-center justify-center"
-          >
-            {secondarySkills.map((skill, index) => (
-              <SkillsContainer key={index} svg={skill.svg} text={skill.text} />
-            ))}
-          </motion.div>
-        </div>
       </div>
     </section>
   );
