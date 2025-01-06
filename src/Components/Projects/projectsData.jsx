@@ -5,7 +5,6 @@ import {
   FaReact,
   FaNodeJs,
   FaBootstrap,
-  FaDatabase,
 } from "react-icons/fa";
 import { SiChakraui, SiMongodb, SiExpress, SiRedux } from "react-icons/si";
 import { IoPieChartSharp } from "react-icons/io5";
@@ -14,7 +13,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 const projectsData = [
   // WeLearn
   {
-    img: "https://github.com/Adrian9502/WeLearn-SE2/blob/main/image_2024-12-12_104406652.png?raw=true",
+    img: "https://github.com/Adrian9502/WeLearn-SE2/blob/main/image.png?raw=true",
     title: "WeLearn - Web based sorting algorithms and binary operation game",
     description:
       "A Software Engineering 2 Project. This MERN stack application is an interactive quiz platform designed to help students and enthusiasts learn and practice sorting algorithms and binary operations through engaging, structured quizzes.",
@@ -85,7 +84,19 @@ const projectsData = [
       { text: "Tailwind", icon: RiTailwindCssFill },
     ],
   },
-
+  // BakeMart UI
+  {
+    img: "https://github.com/Adrian9502/bakemart-cafe-and-bakery/blob/main/preview/1.png?raw=true",
+    title: "BakeMart - Cafe and Bakery",
+    description:
+      "I created this website UI for my Graphic Design subject, using React and Tailwind CSS for its development.",
+    siteLink: "https://bakemart.vercel.app/",
+    siteCode: "https://github.com/Adrian9502/bakemart-cafe-and-bakery",
+    techStack: [
+      { text: "React", icon: FaReact },
+      { text: "Tailwind", icon: RiTailwindCssFill },
+    ],
+  },
   // Youtube Clone React
   {
     img: "https://github.com/Adrian9502/react-tailwind-youtube-clone/blob/main/yt.png?raw=true",
