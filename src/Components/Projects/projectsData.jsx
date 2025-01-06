@@ -90,7 +90,7 @@ const projectsData = [
     title: "BakeMart - Cafe and Bakery",
     description:
       "I created this website UI for my Graphic Design subject, using React and Tailwind CSS for its development.",
-    siteLink: "https://bakemart.vercel.app/",
+    siteLink: "https://bakemart-cafe-and-bakery-deploy.vercel.app/",
     siteCode: "https://github.com/Adrian9502/bakemart-cafe-and-bakery",
     techStack: [
       { text: "React", icon: FaReact },
