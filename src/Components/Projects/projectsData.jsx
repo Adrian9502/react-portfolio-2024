@@ -55,6 +55,22 @@ const projectsData = [
       { text: "Redux", icon: SiRedux },
     ],
   },
+  // MERN Advance auth
+  {
+    img: "https://github.com/Adrian9502/mern-advance-auth-system/blob/main/preview/login.png?raw=true",
+    title: "MERN - Advance Auth",
+    description:
+      "This is a simple authentication system built with the MERN stack (MongoDB, Express, React, Node.js) and styled using Tailwind CSS. The system supports user registration, email verification, and password recovery.",
+    siteLink: "https://mern-advance-auth-system.vercel.app/login",
+    siteCode: "https://github.com/Adrian9502/mern-advance-auth-system",
+    techStack: [
+      { text: "MongoDB", icon: SiMongodb },
+      { text: "ExpressJS", icon: SiExpress },
+      { text: "React", icon: FaReact },
+      { text: "Node.js", icon: FaNodeJs },
+      { text: "Tailwind", icon: RiTailwindCssFill },
+    ],
+  },
   // Datkilab
   {
     img: "https://github.com/Adrian9502/react-datkilab/blob/main/image_2024-12-12_110522495.png?raw=true",
